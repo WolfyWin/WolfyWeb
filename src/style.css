@@ -596,6 +596,17 @@ button:focus {
   text-align: center;
 }
 
+/* ---------------------------Design----------------------------- */
+
+.design-section {
+  padding-top: 150px !important;
+  padding-bottom: 30px !important;
+  background-image:  url(./Assets/bg/6.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
 /* ---------------------------About ----------------------------- */
 
 .about-section {

@@ -7,7 +7,7 @@ function MyAvatar() {
   
   const { transform } = useSpring({
 
-    transform: isHovered ? `scale(1.2)` : `scale(1)`,
+    transform: isHovered ? `scale(1.1)` : `scale(1)`,
     config: { mass: 1, tension: 170, friction: 26 }
 
   })

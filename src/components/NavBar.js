@@ -73,6 +73,7 @@ const NavBar = () => {
                 <Dropdown.Item as={Link} to="/design" className="dropdown-item-custom">Design</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
+            <NavItem to="/contact" icon={BsRobot} onClick={navLinkOnClick}>Contact</NavItem>
           </Nav>
         </Navbar.Collapse>
       </Container>

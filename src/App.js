@@ -4,8 +4,10 @@ import { NavBar } from './components/NavBar'
 import { Home } from './components/Home/Home'
 import { About } from './components/About/About'
 import { Projects } from './components/Projets/Projects'
+import { Design } from './components/Projets/Design/Design'
+import { Contact } from './components/Contact/Contact'
 import { Footer } from './components/Footer'
-import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import Particles from "react-tsparticles";
 import { loadFull } from "tsparticles";
@@ -85,9 +87,10 @@ function App() {
           <Particles id="tsparticles" options={effect} init={particlesInit} loaded={particlesLoaded} />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/project" element={<Projects />} />
             <Route path="/about" element={<About />} />
-            <Route path="*" element={<Navigate replace to="/" />} />
+            <Route path="/project" element={<Projects />} />
+            <Route path="/design" element={<Design />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
         </div>
