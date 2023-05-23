@@ -26,5 +26,3 @@ const AnimatedIcon = ({ icon: Icon }) => {
 }
 
 export { AnimatedIcon }
-
-// Composant pour l'animation de la navbar

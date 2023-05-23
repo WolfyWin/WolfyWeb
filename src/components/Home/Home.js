@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import { Writing } from './Writing'
+import { Terminal } from '../Anim/Terminal'
 import homeLogo from '../../Assets/img/hero.png'
 import { Home2  }from './Home2'
 
@@ -12,18 +12,13 @@ const Home = () => {
           <Row>
             <Col md={7} className="home-header">
               <h1 className="heading">
-                Hi There!{" "}
+                Hello World !{" "}
                 <span className="wave" role="img" aria-labelledby="wave">
                   🪐
                 </span>
               </h1>
-
-              <h1 className="heading-name">
-                I'm
-                <strong className="main-name"> Rebecca</strong>
-              </h1>
               <div className="writing-container">
-                <Writing/>
+                <Terminal/>
               </div>
             </Col>
 

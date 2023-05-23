@@ -24,10 +24,11 @@ const About = () => (
           <img src={working} alt="about" className="about-working img-fluid rounded-circle" />
         </Col>
       </Row>
-      <SectionTitle>Skills</SectionTitle>
+      <SectionTitle>Compétences</SectionTitle>
       <Techstack />
-      <SectionTitle>Tools</SectionTitle>
+      <SectionTitle>Outils</SectionTitle>
       <Toolstack />
+      <SectionTitle>Certifications & Training</SectionTitle>
     </Container>
   </Container>
 )

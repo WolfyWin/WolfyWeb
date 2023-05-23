@@ -3,14 +3,14 @@ import { Container, Row, Col } from 'react-bootstrap'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { AiFillGithub } from 'react-icons/ai'
 import { MyAvatar } from './MyAvatar'
-import { AnimatedIcon } from '../Animated'
+import { AnimatedIcon } from '../Anim/Animated'
 
 const Home2 = () => {
   return (
     <>
       <Container fluid className="home-about-section" id="about">
         <Container>
-          <Row>
+          <Row className=" justify-content-between" >
             <Col xs={12} sm={12} md={7} lg={7} className="home-about-description mt-4 mb-4">
               <h1 className="about-heading">
                 LET ME <span className="purple"> INTRODUCE </span> MYSELF

@@ -1,16 +1,18 @@
-import React, { useCallback, useState, useEffect } from 'react'
-import Preloader from '../src/components/Pre'
+import React, { useCallback, useState, useEffect, useMemo } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Particles from 'react-tsparticles'
+import { loadFull } from 'tsparticles'
+
+import Preloader from './components/Anim/Pre'
+import { particlesConfig } from './components/Anim/Particles'
 import { NavBar } from './components/NavBar'
 import { Home } from './components/Home/Home'
 import { About } from './components/About/About'
+import { AboutMe } from './components/About/Me'
 import { Projects } from './components/Projets/Projects'
 import { Design } from './components/Projets/Design/Design'
 import { Contact } from './components/Contact/Contact'
 import { Footer } from './components/Footer'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
-
-import Particles from "react-tsparticles";
-import { loadFull } from "tsparticles";
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './style.css'
@@ -34,50 +36,7 @@ function App() {
     return () => clearTimeout(timer)
   }, [])
 
-
-  const effect = {
-    "particles": {
-        "number": {
-            "value": 60,
-            "density": {
-                "enable": true,
-                "value_area": 200
-            }
-        },
-        "line_linked": {
-            "enable": true,
-            "opacity": 0.02
-        },
-        "move": {
-            "direction": "right",
-            "speed": 0.5
-        },
-        "size": {
-            "value": 1
-        },
-        "opacity": {
-            "anim": {
-                "enable": true,
-                "speed": 1,
-                "opacity_min": 0.05
-            }
-        }
-    },
-    "interactivity": {
-        "events": {
-            "onclick": {
-                "enable": true,
-                "mode": "push"
-            }
-        },
-        "modes": {
-            "push": {
-                "particles_nb": 1
-            }
-        }
-    },
-    "retina_detect": true
-  }
+  const effect = useMemo(() => particlesConfig, [])
 
   return (
     <Router>
@@ -88,6 +47,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
+            <Route path="/aboutme" element={<AboutMe />} />
             <Route path="/project" element={<Projects />} />
             <Route path="/design" element={<Design />} />
             <Route path="/contact" element={<Contact />} />
