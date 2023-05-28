@@ -2,7 +2,7 @@ import React, { useCallback, useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
-import { Preloader, particlesConfig, NavBar, Home, About, AboutMe, Projects, Design, Contact, Footer} from './components'
+import { Preloader, particlesConfig, NavBar, Home, About, AboutMe, Projects, ProjectDetails, Design, Contact, Footer} from './components'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './style.css'
@@ -35,6 +35,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/aboutme" element={<AboutMe />} />
           <Route path="/project" element={<Projects />} />
+          <Route path="/project-details/:title" element={<ProjectDetails />} />
           <Route path="/design" element={<Design />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

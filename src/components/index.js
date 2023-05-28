@@ -1,14 +1,14 @@
-import Preloader from './Anim/Pre'
-import { particlesConfig } from './Anim/Particles'
-import { NavBar } from './NavBar'
-import { Home } from './Home/Home'
-import { About } from './About/About'
-import { AboutMe } from './About/Me'
-import { Projects } from './Projets/Projects'
-import { ProjectCards } from './Projets/ProjectCards'
-import { Design } from './Projets/Design/Design'
-import { Contact } from './Contact/Contact'
-import { Footer } from './Footer'
+import Preloader from './anim/pre'
+import { particlesConfig } from './anim/particles'
+import { NavBar } from './navBar'
+import { Home } from './home/home'
+import { About } from './about/about'
+import { AboutMe } from './about/me'
+import { Projects } from './projets/projects'
+import { ProjectDetails } from './projets/details'
+import { Design } from './projets/design/design'
+import { Contact } from './contact/contact'
+import { Footer } from './footer'
 
 export  {
     Preloader,
@@ -18,7 +18,7 @@ export  {
     About,
     AboutMe,
     Projects,
-    ProjectCards,
+    ProjectDetails,
     Design,
     Contact,
     Footer
