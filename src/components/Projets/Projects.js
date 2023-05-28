@@ -1,13 +1,12 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
 
 import { Container, Row, Col } from 'react-bootstrap'
 import { ProjectCards } from './ProjectCards'
-import codeheroes from '../../Assets/img/Projects/codeheroes.png'
-import alterlms from '../../Assets/img/Projects/alterlms.png'
-import cthulhu from '../../Assets/img/Projects/cthulhu.png'
-import veille from '../../Assets/img/Projects/veille.png'
-import autism from '../../Assets/img/Projects/autism.png'
+import codeheroes from '../../assets/img/Projects/codeheroes.png'
+import alterlms from '../../assets/img/Projects/alterlms.png'
+import cthulhu from '../../assets/img/Projects/cthulhu.png'
+import veille from '../../assets/img/Projects/veille.png'
+import autism from '../../assets/img/Projects/autism.png'
 
 const projectsData = [
   {
@@ -52,11 +51,9 @@ const Projects = () => (
         My Recent <strong className="purple">Works</strong>
       </h1>
       <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
-        {projectsData.map((project, index) => (
+      {projectsData.map((project, index) => (
           <Col md={4} className="project-card" key={index}>
-            <Link to={`/project/${index}`}>
-              <ProjectCards {...project} />
-            </Link>
+            <ProjectCards {...project} />
           </Col>
         ))}
       </Row>

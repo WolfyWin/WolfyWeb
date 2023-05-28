@@ -1,59 +1,45 @@
-import React, { useCallback, useState, useEffect, useMemo } from 'react'
+import React, { useCallback, useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Particles from 'react-tsparticles'
 import { loadFull } from 'tsparticles'
-
-import Preloader from './components/Anim/Pre'
-import { particlesConfig } from './components/Anim/Particles'
-import { NavBar } from './components/NavBar'
-import { Home } from './components/Home/Home'
-import { About } from './components/About/About'
-import { AboutMe } from './components/About/Me'
-import { Projects } from './components/Projets/Projects'
-import { Design } from './components/Projets/Design/Design'
-import { Contact } from './components/Contact/Contact'
-import { Footer } from './components/Footer'
+import { Preloader, particlesConfig, NavBar, Home, About, AboutMe, Projects, Design, Contact, Footer} from './components'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './style.css'
 
 function App() {
-  const particlesInit = useCallback(async engine => {
-      console.log(engine);
+  const initializeParticles = useCallback(async engine => {
       await loadFull(engine);
   }, [])
 
-  const particlesLoaded = useCallback(async container => {
-      console.log(container);
-  }, [])
+  const handleParticlesLoaded = useCallback(async () => {
+  }, []);
 
-  const [load, upadateLoad] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      upadateLoad(false)
+      setIsLoading(false)
     }, 1200)
     return () => clearTimeout(timer)
   }, [])
 
-  const effect = useMemo(() => particlesConfig, [])
-
   return (
     <Router>
-      <Preloader load={load} />
-        <div className="App" id={load ? "no-scroll" : "scroll"}>
-          <NavBar />
-          <Particles id="tsparticles" options={effect} init={particlesInit} loaded={particlesLoaded} />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/aboutme" element={<AboutMe />} />
-            <Route path="/project" element={<Projects />} />
-            <Route path="/design" element={<Design />} />
-            <Route path="/contact" element={<Contact />} />
-          </Routes>
-          <Footer />
-        </div>
+      <Preloader load={isLoading} />
+      <div className="App" id={isLoading ? "no-scroll" : "scroll"}>
+        <NavBar />
+        <Particles id="tsparticles" options={particlesConfig} init={initializeParticles} loaded={handleParticlesLoaded} />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/aboutme" element={<AboutMe />} />
+          <Route path="/project" element={<Projects />} />
+          <Route path="/design" element={<Design />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+        <Footer />
+      </div>
     </Router>
   )
 }

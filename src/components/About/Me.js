@@ -1,10 +1,6 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
-import working from '../../Assets/img/working.jpg'
-
-const SectionTitle = ({ children }) => (
-    <h2 className="mt-3 mb-3">{children}</h2>
-)
+import working from '../../assets/img/working.jpg'
 
 const AboutMe = () => (
     <Container fluid className="home-section" id="aboutMe">

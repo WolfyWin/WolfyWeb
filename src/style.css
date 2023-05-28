@@ -2,34 +2,33 @@
 
 @font-face {
   font-family: 'mokoto';
-  src: url('./Assets/font/glitch-webfont.woff2') format('woff2');
+  src: url('./assets/font/glitch-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'mokoto_glitch_outline';
-  src: url('./Assets/font/glitch_mark_outline-webfont.woff2') format('woff2');
+  src: url('./assets/font/glitch_mark_outline-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'mokoto_glitch_mk1';
-  src: url('./Assets/font/glitch_mark_1-webfont.woff2') format('woff2');
+  src: url('./assets/font/glitch_mark_1-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'mokoto_glitch_mk2';
-  src: url('./Assets/font/glitch_mark_2-webfont.woff2') format('woff2');
+  src: url('./assets/font/glitch_mark_2-webfont.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
 
 /* --------------------------------------------------------------------------------*/
-
 html {
   --imp-text-color: #c491dc;
 }
@@ -40,10 +39,17 @@ html {
 
 body {
   margin: 0;
-  background-image: url(./Assets/bg/6.png);
+  background-image: url(./assets/background/purple.png);
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
+/* h1{
+  background: linear-gradient(270deg, #6d91da, #f817c8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 3rem;
+} */
 
 a {
   text-decoration: none;
@@ -55,7 +61,7 @@ a {
 
 #preloader {
   background-color: rgb(29, 21, 36);
-  background-image: url(./Assets/img/pre.svg);
+  background-image: url(./assets/img/pre.svg);
   background-repeat: no-repeat;
   background-position: center;
   position: fixed;
@@ -371,11 +377,13 @@ a {
 .home-about-section {
   padding-bottom: 70px;
   padding-top: 70px;
-  background-image:  url(./Assets/bg/4.png);
+  background-image:  url(./assets/background/diamond.png);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
 }
+
+
 
 .home-about-description {
   color: #e8e1fb;
@@ -458,7 +466,7 @@ a {
   background-color: rgba(0, 0, 0, 0.517);
   border-radius: 10px;
   border: 2px solid rgba(109, 83, 121, 0.637);
-  box-shadow: 4px 5px 4px 3px rgb(89 4 168 / 14%);
+  box-shadow: 4px 5px 4px 3px ;
 }
 
 /* -------------------card-----------------------  */
@@ -474,6 +482,7 @@ a {
   text-align: justify;
   font-size: 1.2rem;
   font-weight: 500;
+  color: white;
 }
 
 .about-activity {
@@ -620,4 +629,13 @@ a {
   padding-bottom: 30px;
   background-size: cover;
   color: white;
+}
+
+.form-contact {
+  background: rgba(206, 185, 218, 0.35);
+  box-shadow: 0 8px 32px 0 rgb(31 38 135 / 37%);
+  backdrop-filter: blur(9.5px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 50px 20px;
 }

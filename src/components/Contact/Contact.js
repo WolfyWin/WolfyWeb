@@ -1,38 +1,41 @@
 import React from 'react'
-import { Container, Form, Button } from 'react-bootstrap'
+import { Container, Form, Button, Row } from 'react-bootstrap'
 
 const Contact = () => (
-    <Container fluid className="contact-section" id="contact">
-            <h1 className="project-heading">
-                Contact
-            </h1>
-        <Container >
-            <div className="contact-form mt-4 mb-4 col-lg-4">
-                <Form>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>Email address</Form.Label>
-                        <Form.Control type="email" placeholder="Enter email" />
-                        <Form.Text className="text-muted">
-                            We'll never share your email with anyone else.
-                        </Form.Text>
+    <Container fluid className="contact-section  p-sm-5" id="contact">
+        <Row className="row text-center my-5">
+            <div className="col-12">
+                <h1 className="project-heading">
+                    Contact
+                </h1>
+            </div>
+        </Row>
+         <Row className="row">
+            <div className="col-sm-12 col-md-6 mb-sm-0 mb-4">
+            </div>
+            <div className="col-sm-12 col-md-6">
+                <Form className="form-contact">
+                    <Form.Group className="row mb-4">
+                        <div className="col-sm-12 col-md-6 mb-4 mb-sm-0">
+                            <Form.Control type="name" placeholder="Nom" />
+                        </div>
+                        <div className="col-sm-12 col-md-6 mb-4 mb-sm-0">
+                            <Form.Control type="name" placeholder="Prénom" />
+                        </div>
                     </Form.Group>
-
-                    <Form.Group controlId="formBasicSubject">
-                        <Form.Label>Subject</Form.Label>
-                        <Form.Control type="text" placeholder="Subject" />
+                    <Form.Group controlId="formBasicEmail" className="mb-4">
+                        <Form.Control type="email" placeholder="Entrer votre email" />
                     </Form.Group>
-
-                    <Form.Group controlId="formBasicMessage">
-                        <Form.Label>Message</Form.Label>
-                        <Form.Control as="textarea" rows={3} />
+                    <Form.Group controlId="formBasicMessage" className="mb-4">
+                        <Form.Control as="textarea" rows={3} placeholder="Votre message"/>
                     </Form.Group>
 
                     <Button variant="primary" type="submit">
-                        Submit
+                        Envoyer
                     </Button>
                 </Form>
             </div>
-        </Container>
+        </Row>
     </Container>
 )
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Terminal } from '../Anim/Terminal'
-import homeLogo from '../../Assets/img/hero.png'
+import homeLogo from '../../assets/img/hero.png'
 import { Home2  }from './Home2'
 
 const Home = () => {

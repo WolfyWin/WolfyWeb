@@ -4,7 +4,7 @@ import { Link, useLocation } from 'react-router-dom'
 import { SiReactos } from 'react-icons/si'
 import { RiRocketLine } from 'react-icons/ri'
 import { BsRobot } from 'react-icons/bs'
-import logo from '../Assets/img/logo.png'
+import logo from '../assets/img/logo.png'
 import { debounce } from 'lodash'
 
 const useScrollHandler = (handler, delay) => {

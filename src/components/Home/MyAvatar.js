@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { useSpring, animated } from 'react-spring'
-import myAvatar from '../../Assets/img/avatar.png'
+import myAvatar from '../../assets/img/avatar.png'
 
 function MyAvatar() {
   const [isHovered, setIsHovered] = useState(false)

@@ -5,7 +5,7 @@ import { Techstack } from './Techstack'
 import { Toolstack } from './Toolstack'
 import { AboutCard  }from'./AboutCard'
 
-import working from '../../Assets/img/working.jpg'
+import working from '../../assets/img/working.jpg'
 
 const SectionTitle = ({ children }) => (
   <h1 className="project-heading">
@@ -14,7 +14,7 @@ const SectionTitle = ({ children }) => (
 )
 
 const About = () => (
-  <Container fluid className="about-section">
+  <Container fluid className="about-section" id="competences">
     <Container>
       <Row className="justify-content-center align-items-center py-3 pt-5 mt-5">
         <Col md={7} className="px-3">
