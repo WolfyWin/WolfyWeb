@@ -9,20 +9,19 @@ import { CgWebsite } from 'react-icons/cg'
 import { projectsData } from '../../data/projets.js'
 
 const ProjectDetails = () => {
-    const { title } = useParams()
-    const project = projectsData.find(project => project.title === title)
+const { title } = useParams()
+const project = projectsData.find(project => project.title === title)
 
     return (
         <Container fluid className="details-section">
-            <Container>
+            <Container className="content">
                 <div className="details">
-                    <h1 className="details-heading neon">{title}</h1>
+                    <h1 className="heading neon">{title}</h1>
                 </div>
                 <Row className="d-flex justify-content-between">
                     <Col md={6} className="details-bloc-text">
                         <h2 className="details-title neon">Description</h2>
-                        <p>{project.description2}</p>
-
+                        <div className="project-desc">{project.description2}</div> 
                         {project.tech && (
                             <>
                                 <h2 className="details-title neon">Outils & langages</h2>

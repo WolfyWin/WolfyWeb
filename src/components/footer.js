@@ -19,24 +19,21 @@ const Footer = () => {
     </li>
   )
 
-  return (
-    <Container fluid className="footer">
-      <Row>
-        <Col md={4} className="footer-copywright">
-          <h3>Designé et développé par Rébecca Tinchon</h3>
-        </Col>
-        <Col md={4} className="footer-copywright">
-          <h3>© {year} WolfyWeb</h3>
-        </Col>
-        <Col md={4} className="footer-body">
-          <ul className="footer-icons">
-            <SocialIcon href="https://github.com/WolfyWin"><FaGithubAlt /></SocialIcon>
-            <SocialIcon href="https://www.linkedin.com/in/rebeccatinchon/"><SiLinkedin /></SocialIcon>
-          </ul>
-        </Col>
-      </Row>
-    </Container>
-  )
+    return (
+        <Container fluid className="footer">
+            <Container className="pt-3 pb-4">
+                <Row>
+                    <Col md={6} className="footer-copywright">
+                        <h3>© Copyright {year} - WolfyWeb</h3>
+                    </Col>
+                    <Col md={6} className="footer-icons pt-2">
+                        <SocialIcon href="https://github.com/WolfyWin"><FaGithubAlt /></SocialIcon>
+                        <SocialIcon href="https://www.linkedin.com/in/rebeccatinchon/"><SiLinkedin /></SocialIcon>
+                    </Col>
+                </Row>
+            </Container>
+        </Container>
+    )
 }
 
 export {Footer} 

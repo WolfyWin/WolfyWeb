@@ -1,40 +1,75 @@
 import React from 'react'
-import { Container, Row, Col } from 'react-bootstrap'
+import { Container, Row, Col, Button } from 'react-bootstrap'
 import { Terminal } from '../anim/terminal'
-import homeLogo from '../../assets/img/hero.png'
-import { Home2  }from './home2'
+import { FaLinkedinIn } from 'react-icons/fa'
+import { AiFillGithub } from 'react-icons/ai'
+import { MyAvatar } from '../anim/myAvatar'
+import { AnimatedIcon } from '../anim/animated'
+
+const SocialIcon = ({ href, icon }) => (
+    <a href={href} target="_blank" rel="noreferrer" className="home-social-icons mx-2" >
+        <AnimatedIcon icon={icon} />
+    </a>
+)
 
 const Home = () => {
-  return (
-    <>
-      <Container fluid className="home-section" id="home">
-        <Container className="home-content">
-          <Row>
-            <Col md={7} className="home-header">
-              <h1 className="heading neon">
-                Hello World !{" "}
-                <span className="wave" role="img" aria-labelledby="wave">
-                  🪐
-                </span>
-              </h1>
-              <div className="writing-container">
-                <Terminal/>
-              </div>
-            </Col>
+    return (
+        <>
+            <Container fluid className="home-section" id="home">
+                <Container className="content">
+                    <div className="home-header">
+                        <div className="text-center">
+                            <h1 className="heading neon">  Hello World !</h1>
+                            <span className="wave" role="img" aria-labelledby="wave">
+                                🪐
+                            </span>
+                        </div>
+                    </div>
+                    <div className="home-description mt-4 mb-4">
+                        <h2 className="home-description-title purple">
+                            ★ Bienvenue sur mon portfolio ! ★
+                        </h2>
+                        <p className="home-description-body">
+                            Je suis Rébecca, <b className="purple">développeuse web</b> fullstack et votre <b className="purple">commandant de bord</b> pour cette visite.
+                        </p>
+                        <p className="home-description-body">
+                            Ici, vous découvrirez les galaxies de mon <b className="purple">travail</b>, les étoiles de mes <b className="purple">projets</b> et les constellations de mes <b className="purple">compétences</b> techniques.
+                        </p>
+                        <p className="home-description-body">
+                            Alors, <b className="purple">installez-vous</b>, attachez votre ceinture et préparez-vous au <b className="purple">décollage</b>. 
+                        </p>
+                        <p className="home-description-body">
+                            Vous êtes sur le point de <b className="purple">voyager</b> à travers mon univers !
+                        </p>
+                    </div>
+                </Container>
+            </Container>
 
-            <Col md={5} className="home-image">
-              <img
-                src={homeLogo}
-                alt="home pic"
-                className="img-fluid"
-              />
-            </Col>
-          </Row>
-        </Container>
-      </Container>
-      <Home2 />
-    </>
-  )
+            <Container fluid className="home-about-section" id="about">
+                <Container>
+                    <Row className="justify-content-between pt-3 pb-3">
+                        <Col md={6} className="home-terminal">
+                            <div className="writing-container">
+                                <Terminal/>
+                            </div>
+                            <div className="mt-3">
+                                <Button variant="start glow-on-hover" href="/about">
+                                    <h2 className="blue"> START </h2>
+                                </Button>
+                            </div>
+                        </Col>
+                        <Col md={6} className="home-image">
+                            <MyAvatar />
+                            <div className="home-about-social">
+                                <SocialIcon href="https://github.com/WolfyWin" icon={AiFillGithub}/>
+                                <SocialIcon href="https://www.linkedin.com/in/rebeccatinchon/" icon={FaLinkedinIn}/>
+                            </div>
+                        </Col>
+                    </Row>
+                </Container>
+            </Container>
+        </>
+    )
 }
 
 export {Home}
