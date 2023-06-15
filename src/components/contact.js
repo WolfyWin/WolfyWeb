@@ -12,7 +12,7 @@ const handleSubmit = async (e) => {
     const form = e.currentTarget
     const data = new FormData(form)
 
-    const result = await fetch( "https://www.wolfyweb.fr/mail.php" , {
+    const result = await fetch( "https://mails.wolfyweb.fr/mail.php" , {
         method: "POST",
         body: JSON.stringify( {
             nom: data.get('nom'),
