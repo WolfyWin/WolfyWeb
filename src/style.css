@@ -803,8 +803,6 @@ a:hover {
 /* ------------------------------------ Footer---------------------------------------------*/
 .footer {
   background-color: rgb(168, 146, 207);
-  position: relative;
-  z-index: 1;
 }
 
 .footer-copywright{
