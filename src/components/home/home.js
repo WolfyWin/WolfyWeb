@@ -17,15 +17,13 @@ const Home = () => {
         <>
             <Container fluid className="home-section" id="home">
                 <Container className="content">
-                    <div className="home-header">
-                        <div className="text-center">
+                    <div className="home-header text-center">
                             <h1 className="heading neon">  Hello World !</h1>
                             <span className="wave" role="img" aria-labelledby="wave">
                                 🪐
                             </span>
-                        </div>
                     </div>
-                    <div className="home-description mt-4 mb-4">
+                    <div className="home-description mt-5 mb-4">
                         <h2 className="home-description-title purple">
                             ★ Bienvenue sur mon portfolio ! ★
                         </h2>

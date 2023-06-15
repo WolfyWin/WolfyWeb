@@ -78,10 +78,21 @@ html {
 
 body {
   margin: 0;
+  font-family: 'ibm_regular', sans-serif;
+}
+
+body::before {
+  content: "";
+  display: block;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
   background-image: url(./assets/background/purple.png);
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  font-family: 'ibm_regular', sans-serif;
+  background-size: cover;
+  z-index: -1;
 }
 
 a {
@@ -98,7 +109,7 @@ a {
   display: inline-block;
   font-size: 2.3em;
   padding-top: 30px;
-  padding-bottom: 50px;
+  padding-bottom: 30px;
   text-align: center;
 }
 
@@ -318,7 +329,12 @@ a {
 }
 
 .heading {
-  font-size: 2.4rem;
+  font-size: 2rem;
+}
+@media (min-width: 768px) {
+  .home-header .heading {
+    font-size: 2.4rem;
+  }
 }
 
 /* -------------------------------------------  */
@@ -442,6 +458,7 @@ a:hover {
 
 .about-card-list {
   margin: 10px;
+  color: white;
 }
 
 
@@ -465,6 +482,7 @@ a:hover {
 }
 
 .about-activity {
+  color: white;
   list-style: none;
   text-align: left;
   padding-left: 1px;
@@ -725,8 +743,11 @@ a:hover {
 
 /* ------------------------------------ Footer---------------------------------------------*/
 .footer {
-  background-color: rgba(168, 146, 207, 0.154);
+  background-color: rgb(168, 146, 207);
+  position: relative;
+  z-index: 1;
 }
+
 .footer-copywright{
   margin-top: 1em;
 }

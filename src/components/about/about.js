@@ -16,7 +16,7 @@ const About = () => (
             </div>
 
             <Row className="about-row">
-                <Col md={7}>
+              <Col md={7} className="mb-3 mb-md-0 order-2 order-md-1">
                     <Card className="quote-card-view">
                         <Card.Body className="blockquote mb-0">
                             <div className="about-card-body">
@@ -46,15 +46,15 @@ const About = () => (
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col md={5} className="px-5 about-img">
+                <Col md={5} className="px-5 about-img order-1 order-md-2">
                     <img src={working} alt="about" className="about-working img-fluid rounded-circle" />
                 </Col>
             </Row>
             <Row className="about-row">
-                <Col md={5} className="px-5 about-img">
+                <Col md={5} className="px-5 about-img order-1 order-md-1">
                     <img src={avt} alt="about" className="about-avt img-fluid" />
                 </Col>
-                <Col md={7}>
+                <Col md={7} className="order-2 order-md-2" >
                     <Card className="quote-card-view">
                         <Card.Body className="blockquote mb-0">
                             <div className="about-card-body">
@@ -73,7 +73,7 @@ const About = () => (
                 </Col>
             </Row>
             <Row className="about-row">
-                <Col md={7}>
+                <Col md={7} className="order-2 order-md-1">
                     <Card className="quote-card-view">
                         <Card.Body className="blockquote mb-0">
                             <div className="about-card-body">
@@ -90,7 +90,7 @@ const About = () => (
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col md={5} className="px-5 about-img">
+                <Col md={5} className="px-5 about-img order-1 order-md-2">
                     <img src={logo} alt="about" className="img-fluid" />
                 </Col>
             </Row>
@@ -119,7 +119,7 @@ const About = () => (
                 </Col>
             </Row>
             <Row className="about-row">
-                <Col md={7}>
+                <Col md={7} className="order-2 order-md-1">
                     <Card className="quote-card-view">
                         <Card.Body className="blockquote mb-0">
                             <div className="about-card-body">
@@ -136,7 +136,7 @@ const About = () => (
                         </Card.Body>
                     </Card>
                 </Col>
-                <Col md={5} className="px-5 about-img">
+                <Col md={5} className="px-5 about-img order-1 order-md-2">
                     <img src={draw} alt="about" className="img-fluid" />
                 </Col>
             </Row>
