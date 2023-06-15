@@ -4,13 +4,7 @@ import { Terminal } from '../anim/terminal'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { AiFillGithub } from 'react-icons/ai'
 import { MyAvatar } from '../anim/myAvatar'
-import { AnimatedIcon } from '../anim/animated'
-
-const SocialIcon = ({ href, icon }) => (
-    <a href={href} target="_blank" rel="noreferrer" className="home-social-icons mx-2" >
-        <AnimatedIcon icon={icon} />
-    </a>
-)
+import { SocialIcon  } from '../icon/icon'
 
 const Home = () => {
     return (
@@ -59,8 +53,8 @@ const Home = () => {
                         <Col md={6} className="home-image">
                             <MyAvatar />
                             <div className="home-about-social">
-                                <SocialIcon href="https://github.com/WolfyWin" icon={AiFillGithub}/>
-                                <SocialIcon href="https://www.linkedin.com/in/rebeccatinchon/" icon={FaLinkedinIn}/>
+                                <SocialIcon className="home-social-icons mx-2" href="https://github.com/WolfyWin" icon={AiFillGithub} hoverText="GitHub"/>
+                                <SocialIcon className="home-social-icons mx-2" href="https://www.linkedin.com/in/rebeccatinchon/" icon={FaLinkedinIn} hoverText="LinkedIn"/>
                             </div>
                         </Col>
                     </Row>
