@@ -17,39 +17,41 @@ const useScrollHandler = (handler, delay) => {
     }, [debouncedHandler])
 }
 
-const NavItem = ({ to, icon: Icon, children }) => {
-    return (
-        <span>
-            <Nav.Link as={Link} to={to} className="nav-link-custom">
-                <Icon className="nav-icon" />
-                <span className="nav-text">{children}</span>
-            </Nav.Link>
-        </span>
-    )
+const NavItem = ({ to, icon: Icon, children, closeMenu }) => {
+  return (
+      <span>
+          <Nav.Link as={Link} to={to} className="nav-link-custom" onClick={closeMenu}>
+              <Icon className="nav-icon" />
+              <span className="nav-text">{children}</span>
+          </Nav.Link>
+      </span>
+  )
 }
 
 const NavItemNoLink = ({ icon: Icon, children }) => {
-    return (
-        <span className="nav-link-custom">
-            <Icon className="nav-icon" />
-            <span className="nav-text">{children}</span>
-        </span>
-    )
+  return (
+      <span className="nav-link-custom">
+          <Icon className="nav-icon" />
+          <span className="nav-text">{children}</span>
+      </span>
+  )
 }
 
 const NavBar = () => {
     const [navColour, setNavColour] = useState(false)
+    const [isOpen, setIsOpen] = useState(false)
+    
     const location = useLocation()
 
-    const scrollHandler = useCallback(() => {
-            setNavColour(window.scrollY >= 20)
-    }, [])
+    const scrollHandler = useCallback(() => { setNavColour(window.scrollY >= 20) }, [])
 
     useScrollHandler(scrollHandler, 200)
 
+    const closeMenu = () => { setIsOpen(false) }
+
 
     return (
-        <Navbar collapseOnSelect expand="lg" fixed="top" className={navColour ? 'sticky' : 'navbar'} >
+        <Navbar collapseOnSelect expand="lg" fixed="top" className={navColour ? 'sticky' : 'navbar'} onToggle={() => setIsOpen(!isOpen)} expanded={isOpen}>
             <Container>
                 <Navbar.Brand as={Link} to="/">
                     <img src={logo} className="img-fluid logo" alt="brand" />
@@ -59,20 +61,20 @@ const NavBar = () => {
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="ms-auto" defaultActiveKey={location.pathname}>
                         <Nav.Item>
-                            <NavItem to="/" icon={BiPlanet}>Home</NavItem>
+                            <NavItem to="/" icon={BiPlanet} closeMenu={closeMenu}>Home</NavItem>
                         </Nav.Item>
 
                         <NavDropdown title={<NavItemNoLink icon={GiSamusHelmet}>À propos</NavItemNoLink>}>
-                            <NavDropdown.Item as={Link} to="/about">Qui suis-je</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/Competency">Mes compétences</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/about" onClick={closeMenu}>Qui suis-je</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/Competency" onClick={closeMenu}>Mes compétences</NavDropdown.Item>
                         </NavDropdown>
                         
                         <NavDropdown title={<NavItemNoLink icon={RxRocket}>Projets</NavItemNoLink>}>
-                            <NavDropdown.Item as={Link} to="/project">Web</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/project" onClick={closeMenu}>Web</NavDropdown.Item>
                         </NavDropdown>
 
                         <Nav.Item>
-                            <NavItem to="/contact" icon={MdMailOutline}>Contact</NavItem>
+                            <NavItem to="/contact" icon={MdMailOutline} closeMenu={closeMenu}>Contact</NavItem>
                         </Nav.Item>
                     </Nav>
                 </Navbar.Collapse>

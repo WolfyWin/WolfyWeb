@@ -45,6 +45,12 @@
 html {
   --imp-text-purple : rgb(161, 126, 255);
   --imp-text-blue: #37f5f5;
+  --imp-text-default: white;
+}
+
+.default {
+  color: var(--imp-text-default);
+  text-shadow: 0 0 15px #10001e;
 }
 
 .blue {
@@ -79,6 +85,7 @@ html {
 body {
   margin: 0;
   font-family: 'ibm_regular', sans-serif;
+  color: var(--imp-text-default);
 }
 
 body::before {
@@ -472,7 +479,8 @@ a:hover {
 }
 
 .about-card-body {
-  text-align: justify;
+  text-align: left;
+  line-height: 1.5;
   color: white;
 }
 
@@ -490,6 +498,7 @@ a:hover {
 }
 .quote {
   font-family: 'ibm_italic', sans-serif;
+  font-size: 1.2rem !important;
   padding-left: 3rem;
   padding-top: 10px;
 }
@@ -663,23 +672,43 @@ a:hover {
   padding-bottom: 10px;
 }
 
-.details-bloc-text {
-  color: #e8e1fb;
-  padding-top: 30px;
+.description-bloc {
+  backdrop-filter: blur(3px) saturate(107%);
+  -webkit-backdrop-filter: blur(3px) saturate(107%);
+  background-color: rgba(15, 11, 20, 0.4);
+  border-radius: 12px;
+  border: 2px solid rgba(200, 137, 230, 0.637);
+  box-shadow: 4px 5px 4px 3px rgb(89 4 168 / 14%);
 }
 
-.details-image {
-  display:block;
-  max-width: 80%;
-  height: auto;
-  padding: 20px;
-  border-radius: 30px;
-}
 .project-desc {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 500;
   padding-bottom: 20px;
   line-height: 1.8;
+  color: white;
+}
+
+
+.project-desc-link {
+  padding-top: 15px;
+  position: relative;
+}
+
+.project-img{
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.details-image {
+  border-radius: 12px;
+}
+
+.stack-bloc {
+  color: #e8e1fb;
+  padding-top: 10px;
 }
 
 .details-icons {
@@ -777,10 +806,69 @@ a:hover {
   }
 }
 /* ------------------------------------ Contact -----------------------------------------  */
-.contact-section {
-  padding-bottom: 30px;
-  background-size: cover;
+
+.container-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.contact-card {
+  width: 50%;
+  text-align: center;
+  border-radius: 1.5em;
+  padding: 10px;
+  background-color: rgba(15, 11, 20, 0.593);
+  box-shadow: 5px 5px 30px rgb(74, 46, 99), -5px -5px 30px rgb(121, 75, 165);
+}
+
+.profileimage {
+  background-color: transparent;
+  border: none;
+  margin-top: 20px;
+  border-radius: 5em;
+  text-align: center;
+}
+
+.profile {
+  border-radius: 50%;
+  width: 60%;
+}
+
+.contact-card-info {
+  padding-top: 20px;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'ibm_italic', sans-serif;
+}
+
+.contact-bar {
+  display: inline-block;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  border-radius: 3em;
+  padding: 14px;
+  background-color: rgba(44, 32, 59, 0.593);
+  box-shadow: 3px 3px 15px rgb(74, 46, 99),
+                   -3px -3px 15px rgb(121, 75, 165);
+}
+
+.contact-icon {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  background: rgb(96, 71, 139);
+  border-radius: 50%;
+  transition: 0.5s;
   color: white;
+}
+
+.contact-icon:hover {
+  box-shadow: 0 0 15px var(--imp-text-blue);
 }
 
 .bloc-text {
@@ -792,13 +880,63 @@ a:hover {
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137);
 }
 
+.contact-title {
+  font-family: 'mokoto', sans-serif;
+  font-size: 1.5rem;
+  padding-top: 15px;
+  margin: 0;
+}
+
 .contact-bloc {
   margin:auto;
+}
+
+@media screen and (max-width: 1200px) {
+  .contact-section {
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .contact-section .contact-card {
+    width: 100% !important;
+    margin: auto;
+  }
+}
+
+/* --------------------------------------  */
+
+.container-form {
+  background-color: rgba(15, 11, 20, 0.593);
+  border-radius: 10px;
+  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137);
+  padding: 20px;
 }
 
 .form-contact {
   padding: 50px;
 }
+
+.form-control {
+  background-color: rgba(84, 73, 98, 0.593);
+  border: none;
+  padding: 14px;
+  color: white;
+  font-size: 1.2em;
+  background: linear-gradient(90deg, rgba(255, 254, 250, 0) 0%, rgba(55, 245, 245, 0.543) 27%, rgba(102, 224, 255, 0.3) 63%, rgba(255, 255, 255, 0) 100%),     linear-gradient(0deg, rgba(102, 224, 255, 0.3) 0%, rgba(255, 255, 255, 0) 10%, rgba(255, 255, 255, 0) 96%, rgba(102, 224, 255, 0.3) 100%);
+  
+}
+
+.form-control:focus {
+  background-color: rgba(44, 32, 59, 0.593);
+  color: white;
+}
+
+.form-control::placeholder {
+  color: white;
+}
+
+
 
 /* ------------------------------------ Footer---------------------------------------------*/
 .footer {

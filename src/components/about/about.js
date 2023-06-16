@@ -24,7 +24,7 @@ const About = () => (
                                     Je m'appelle <span className="purple">Rébecca </span> et je vis en <span className="purple">Alsace</span>.
                                 </p>
                                 <p>
-                                    👩🏻‍🚀 Je suis une personne <span className="purple">passionnée</span>, curieuse, <span className="purple">débordante</span> d'idées et d'imagination.
+                                    Je suis une personne <span className="purple">passionnée</span>, curieuse, <span className="purple">débordante</span> d'idées et d'imagination 👩🏻‍🚀
                                 </p>
                                 <p>
                                     👾 Dans la vie j'aime :
@@ -78,7 +78,7 @@ const About = () => (
                         <Card.Body className="blockquote mb-0">
                             <div className="about-card-body">
                                 <p>
-                                    Je ne suis pas seulement une <span className="purple">développeuse</span>. 
+                                    Je ne suis pas seulement <span className="purple">développeuse</span>. 
                                 </p> 
                                 <p>
                                     Depuis ma plus tendre enfance, je <span className="purple">dessine</span>, créant des univers qui reflètent ma <span className="purple">personnalité unique</span>. 

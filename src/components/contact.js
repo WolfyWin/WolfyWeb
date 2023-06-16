@@ -1,7 +1,9 @@
 import React from 'react'
 import { Container, Form, Button, Row, Col } from 'react-bootstrap'
-import oni from '../assets/img/oni.png'
-import contact from '../assets/img/contact.gif'
+import { SocialIcon  } from './icon/icon'
+import { FaLinkedinIn } from 'react-icons/fa'
+import { AiFillGithub } from 'react-icons/ai'
+import contact from '../assets/img/contact.png'
 
 var success = false
 
@@ -46,53 +48,40 @@ const Contact = () => (
             <div className="text-center">
                 <h1 className="heading neon">Contact</h1>
             </div>
-
-            <Row className="d-flex bloc-text mb-5">
-                <Col md={2}>
-                    <img src={oni} alt="contact-img" className="details-image" style={{textAlign:'center'}} />
+            <Row className="d-flex justify-content-between pt-3 contact-section">
+                <Col md={6} className="container-card">
+                    <div className="contact-card">
+                        <div class="profileimage">
+                            <img src={contact} alt="contact-img" className="profile"/>
+                        </div>
+                        <div className="contact-card-info">
+                            <p className="blue noglitch">Rebecca Tinchon</p>
+                        </div>
+                        <div class="contact-bar">
+                            <SocialIcon className="contact-icon mx-2" href="https://github.com/WolfyWin" icon={AiFillGithub} hoverText="GitHub"/>
+                            <SocialIcon className="contact-icon mx-2" href="https://www.linkedin.com/in/rebeccatinchon/" icon={FaLinkedinIn} hoverText="LinkedIn"/>
+                        </div>
+                    </div>
                 </Col>
-                <Col md={8} className="contact-bloc">
-                    <h2>Vous avez un projet ? Une question ?</h2> 
-                    <h2>N'hésitez pas à me contacter !</h2>
-                </Col >
-                <Col md={2}>
-                    <img src={oni} alt="contact-img" className="details-image" style={{textAlign:'center'}} />
-                </Col>
-            </Row>
-
-            <Row className="d-flex bloc-text">
-                <Col md={6}>
-                    <img src={contact} alt="contact-img" className="pt-5 pb-5" style={{textAlign:'center'}} />
-                </Col>
-
-                <Col md={6} className="mt-5 mb-5" style={{'display': 'flex'}}>
-
-                    <p id="success" className="glitch neon" style={{'alignSelf': 'center', 'display': 'none'}}>Votre message a bien été envoyé !</p>
-
+                <Col md={6} className="container-form mt-5 mb-5">
+                    <h2 className="contact-title purple text-center">Vous avez un projet ? Une question ?</h2>
                     <Form className="form-contact" onSubmit={handleSubmit}>
-                        <Form.Group className="row mb-4">
-                            <div className="col-sm-12 col-md-6 mb-4 mb-sm-0">
-                                <Form.Control type="name" name="nom" placeholder="Nom" />
-                            </div>
-                            <div className="col-sm-12 col-md-6 mb-4 mb-sm-0">
-                                <Form.Control type="name" name="prenom" placeholder="Prénom" />
-                            </div>
+                        <Form.Group className="mb-4">
+                        <Form.Control required type="name" name="nom" placeholder="Nom / Prénom" pattern="[A-Za-z -]+"/>
                         </Form.Group>
-
                         <Form.Group controlId="formBasicEmail" className="mb-4">
-                            <Form.Control type="email" name="email" placeholder="Entrer votre email" />
+                            <Form.Control type="email" name="email" placeholder="Email" />
                         </Form.Group>
-
                         <Form.Group controlId="formBasicMessage" className="mb-4">
-                            <Form.Control as="textarea" name="message" rows={3} placeholder="Votre message"/>
+                            <Form.Control as="textarea" name="message" rows={3} placeholder="Message"/>
                         </Form.Group>
-
                         <div className="text-center">
                             <Button variant="start glow-on-hover" type="submit">
                                 <h6 className="blue"> Envoyer </h6>
                             </Button>
                         </div>
                     </Form>
+                    <p id="success" className="glitch neon" style={{'alignSelf': 'center', 'display': 'none'}}>Votre message a bien été envoyé !</p>
                 </Col>
             </Row>
         </Container>

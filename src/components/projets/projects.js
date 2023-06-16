@@ -22,7 +22,7 @@ const Projects = () => (
                                 <Card.Title className="neon card-title">
                                     {project.title}
                                 </Card.Title>
-                                <Card.Text style={{ textAlign: "justify" }}>
+                                <Card.Text style={{ textAlign: "left" }}>
                                     {project.description}
                                 </Card.Text>
                                 <Link to={`/project-details/${project.title}`} className="project-details-link">
