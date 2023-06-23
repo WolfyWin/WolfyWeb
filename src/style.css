@@ -944,7 +944,7 @@ a:hover {
   color: white;
 }
 
-#success {
+.success {
   display: flex;
   justify-content: center;
   text-align: center;
@@ -952,6 +952,11 @@ a:hover {
   margin-bottom: 50px;
 }
 
+.error {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
 
 /* ------------------------------------ Footer---------------------------------------------*/
 .footer {

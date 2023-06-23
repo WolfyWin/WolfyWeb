@@ -40,9 +40,11 @@ const Contact = () => {
 
             } else {
                 setError(res.errors.join('\n'))
+                document.getElementById('error').style.display = 'block'
             }
         } catch (err) {
             setError(`Une erreur est survenue, veuillez réessayer.`)
+            document.getElementById('error').style.display = 'block'
         }
     }
 
@@ -87,7 +89,7 @@ const Contact = () => {
                             </div>
                         </Form>
                         {success && <p id="success" className="glitch neon success">Votre message a bien été envoyé !</p>}
-                        {error && <p id="success" className="error">{error}</p>}
+                        {error && <p id="error" className="noglitch blue error">{error}</p>}
                     </Col>
                 </Row>
             </Container>
