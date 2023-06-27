@@ -1,10 +1,10 @@
 import React from 'react'
 import { Container, Row, Col, Button } from 'react-bootstrap'
-import { Terminal } from '../anim/terminal'
+import { Terminal } from './anim/terminal'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { AiFillGithub } from 'react-icons/ai'
-import { MyAvatar } from '../anim/myAvatar'
-import { SocialIcon  } from '../icon/icon'
+import { MyAvatar } from './anim/myAvatar'
+import { SocialIcon  } from './icon/icon'
 
 const Home = () => {
     return (

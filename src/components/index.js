@@ -1,7 +1,7 @@
 import Preloader from './anim/pre'
 import { particlesConfig } from './anim/particles'
 import { NavBar } from './navBar'
-import { Home } from './home/home'
+import { Home } from './home'
 import { Competency } from './about/competency'
 import { About } from './about/about'
 import { Projects } from './projets/projects'

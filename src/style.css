@@ -218,7 +218,7 @@ a {
 }
 
 .navbar-nav .nav-link.active, .navbar-nav .show >.nav-link {
-  color: white;
+  color: var(--imp-text-blue);
 }
 
 .dropdown-menu{
@@ -231,7 +231,7 @@ a {
 }
 
 .dropdown-item:hover {
-  color: white;
+  color: var(--imp-text-blue);
   background-color: #2f244cd4;
 }
 
@@ -314,6 +314,7 @@ a {
   position: relative;
   z-index: 1;
 }
+
 .home-description {
   color: #e8e1fb;
   padding-top: 20px;
@@ -348,12 +349,12 @@ a {
 .heading {
   font-size: 2rem;
 }
+
 @media (min-width: 768px) {
   .home-header .heading {
     font-size: 2.4rem;
   }
 }
-
 /* -------------------------------------------  */
 
 .home-about-section {
@@ -551,11 +552,6 @@ a:hover {
   transform: scale(1.1);
 }
 
-.tech-icon-images {
-  padding: 20px;
-  line-height: 1.6;
-}
-
 .tooltip {
   position: absolute;
   bottom: 100%;
@@ -576,10 +572,6 @@ a:hover {
   opacity: 1;
 }
 
-.h-projet {
-  font-family: 'ibm_mono', sans-serif;
-}
-
 /* ------------------------------------ Projects -----------------------------------------  */
 
 .project-section {
@@ -588,13 +580,6 @@ a:hover {
   background-size: cover;
   color: white;
   font-family: 'ibm_mono', sans-serif;
-}
-
-.project-heading {
-  font-size: 2.3em;
-  padding-top: 30px;
-  padding-bottom: 50px;
-  text-align: center;
 }
 
 .project-card {
@@ -617,7 +602,6 @@ a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
-
 }
 
 .project-card-view {
@@ -723,7 +707,6 @@ a:hover {
   color: white;
 }
 
-
 .project-desc-link {
   padding-top: 15px;
   padding-bottom: 30px;
@@ -759,10 +742,6 @@ a:hover {
   box-sizing: border-box;
 }
 
-.button-list {
-  display: flex;
-}
-
 .project-icons  {
   margin-top: 20px;
   display: inline-flex;
@@ -794,30 +773,6 @@ a:hover {
   box-shadow: 0 0 15px var(--imp-text-blue);
 }
 
-.btn-primary {
-  display: inline-block;
-  outline: 0;
-  border: 0;
-  cursor: pointer;
-  color: #fff;
-  font-weight: 500;
-  border-radius: 4px;
-  padding: 0.5em 1em;
-  text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
-  background: linear-gradient(92.88deg, rgb(69, 94, 181) 9.16%, rgb(86, 67, 204) 43.89%, rgb(103, 63, 215) 64.72%);
-  transition: all 0.5s ease 0s;
-}
-
-.btn-primary > svg {
-  position: relative;
-  top: -2px;
-}
-
-.btn-primary:hover {
-  box-shadow: rgb(80 63 205 / 50%) 0px 1px 40px;
-  transition: all 0.1s ease 0s;
-}
-
 @media (max-width: 576px) {
   .project-card {
     padding: 1em;
@@ -825,8 +780,6 @@ a:hover {
 
   .project-grid {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-
-  
   }
   .card-img-top {
     padding: 10px;
@@ -873,9 +826,7 @@ a:hover {
 
 .contact-card-info {
   padding-top: 20px;
-  text-align: center;
   font-size: 1.2rem;
-  font-family: 'ibm_italic', sans-serif;
 }
 
 .contact-bar {
@@ -886,7 +837,7 @@ a:hover {
   padding: 14px;
   background-color: rgba(44, 32, 59, 0.593);
   box-shadow: 3px 3px 15px rgb(74, 46, 99),
-                   -3px -3px 15px rgb(121, 75, 165);
+    -3px -3px 15px rgb(121, 75, 165);
 }
 
 .contact-icon {
@@ -923,25 +874,6 @@ a:hover {
   margin: 0;
 }
 
-.contact-bloc {
-  margin:auto;
-}
-
-@media screen and (max-width: 1200px) {
-  .contact-section {
-    flex-direction: column;
-    justify-content: center !important;
-    align-items: center !important;
-  }
-
-  .contact-section .contact-card {
-    width: 100% !important;
-    margin: auto;
-  }
-}
-
-/* --------------------------------------  */
-
 .contact-section {
   padding-bottom: 30px;
   background-size: cover;
@@ -949,6 +881,7 @@ a:hover {
   position: relative;
   z-index: 1;
 }
+/* --------------------------------------  */
 
 .container-form {
   background-color: rgba(15, 11, 20, 0.593);
@@ -995,7 +928,20 @@ a:hover {
   text-align: center;
 }
 
+@media screen and (max-width: 1200px) {
+  .contact-section {
+    flex-direction: column;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+  .contact-section .contact-card {
+    width: 100% !important;
+    margin: auto;
+  }
+}
 /* ------------------------------------ Footer---------------------------------------------*/
+
 .footer {
   background-color: rgb(168, 146, 207);
 }
