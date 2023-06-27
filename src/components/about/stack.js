@@ -57,7 +57,7 @@ const Stack = ({items}) => {
       {items.map((item, index) => (
         <Col xs={4} md={2} className="tech-icons" key={index}>
           <div data-aos="fade-up" onTouchStart={() => handleTouch(item.name)} onMouseEnter={() => setTooltip(item.name)} onMouseLeave={() => setTooltip(null)}>
-            <item.Icon title={item.name} />
+            <item.Icon />
             {tooltip === item.name && 
               <div className="tooltip">
                 <h3>{item.name}</h3>
