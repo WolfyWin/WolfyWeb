@@ -14,6 +14,13 @@
 }
 
 @font-face {
+  font-family: 'ibm_mono';
+  src: url('./assets/font/ibm/IBMPlexMono-Regular.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'mokoto';
   src: url('./assets/font/mokoto/glitch-webfont.woff2') format('woff2');
   font-weight: normal;
@@ -161,6 +168,7 @@ a {
   position: fixed;
   padding: 0.3rem 2rem;
   font-size: 1.2rem;
+  font-family: 'ibm_mono', sans-serif;
 }
 
 .navbar-brand {
@@ -219,6 +227,7 @@ a {
 
 .dropdown-item{
   color: white;
+  font-family: 'ibm_mono', sans-serif;
 }
 
 .dropdown-item:hover {
@@ -313,6 +322,7 @@ a {
   background-color: rgba(0, 0, 0, 0.517);
   border-radius: 10px;
   box-shadow: 4px 5px 4px 3px rgb(89 4 168 / 14%);
+  font-family: 'ibm_mono', sans-serif;
 }
 
 .home-description-title {
@@ -531,9 +541,10 @@ a:hover {
   display: table;
   text-align: center;
   vertical-align: middle;
-  overflow: hidden;
   transition: all 0.4s ease 0s;
   background-color: rgba(0, 0, 0, 0.566);
+  position: relative;
+  overflow: visible;
 }
 
 .tech-icons:hover {
@@ -545,6 +556,30 @@ a:hover {
   line-height: 1.6;
 }
 
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translate(-50%, -10px);
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 16px;
+  white-space: nowrap;
+  background-color: rgb(150, 75, 221);
+  color: white;
+  text-shadow: 1px 1px 1px rgba(200, 137, 230, 0.637);
+  z-index: 10;
+  opacity: 0;
+}
+
+.tech-icons:hover .tooltip {
+  opacity: 1;
+}
+
+.h-projet {
+  font-family: 'ibm_mono', sans-serif;
+}
+
 /* ------------------------------------ Projects -----------------------------------------  */
 
 .project-section {
@@ -552,6 +587,7 @@ a:hover {
   padding-bottom: 30px;
   background-size: cover;
   color: white;
+  font-family: 'ibm_mono', sans-serif;
 }
 
 .project-heading {
@@ -673,8 +709,6 @@ a:hover {
 }
 
 .description-bloc {
-  backdrop-filter: blur(3px) saturate(107%);
-  -webkit-backdrop-filter: blur(3px) saturate(107%);
   background-color: rgba(15, 11, 20, 0.4);
   border-radius: 12px;
   border: 2px solid rgba(200, 137, 230, 0.637);
@@ -692,6 +726,7 @@ a:hover {
 
 .project-desc-link {
   padding-top: 15px;
+  padding-bottom: 30px;
   position: relative;
 }
 
@@ -700,6 +735,7 @@ a:hover {
   align-items: center;
   display: flex;
   flex-direction: column;
+  padding-bottom: 15px;
 }
 
 .details-image {
@@ -923,6 +959,7 @@ a:hover {
 
 .form-contact {
   padding: 50px;
+  font-family: 'ibm_mono', sans-serif;
 }
 
 .form-control {
@@ -969,9 +1006,9 @@ a:hover {
 
 .footer h3 {
   color: white;
-  text-shadow: 0 0 15px #8703fb;
-  font-size: 1.2rem;
-  font-style: italic;
+  text-shadow: 0 0 15px #673ab7;
+  font-size: 1.3rem;
+  font-family: 'ibm_mono', sans-serif;
 }
 
 .footer-icons {
@@ -980,6 +1017,7 @@ a:hover {
   padding: 0;
   text-align: center;
 }
+
 .footer-icons svg {
   font-size: 1.2rem;
 }

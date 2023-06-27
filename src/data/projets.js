@@ -3,6 +3,7 @@ import alterlms from '../assets/img/Projects/alterlms.png'
 import cthulhu from '../assets/img/Projects/cthulhu.png'
 import veille from '../assets/img/Projects/veille.png'
 import autism from '../assets/img/Projects/autism.png'
+import ww from '../assets/img/Projects/ww.png'
 import { 
   TiHtml5,
   SiCsswizardry,
@@ -14,12 +15,41 @@ import {
   SiHugo,
   SiMysql,
   SiBootstrap,
-  SiVisualstudiocode
+  SiVisualstudiocode,
+  SiLinux,
+  SiGithub,
+  SiPhpstorm
 } from '../data/stack.js'
 import { codeSlides, alterSlides } from '../assets/img/slides'
 
 
 const projectsData = [
+  {
+    imgPath: ww,
+    title: "WolfyWeb",
+    description: "WolfyWeb est mon propre site portfolio, développé avec passion !",
+    description2: (
+      <div>
+        Création et développement de mon propre site portfolio.
+        <br />
+        J'ai utilisé react create app pour le développer afin de me familiariser avec React.
+        <br />
+        Le design est entièrement réalisé par mes soins et sur un thème qui me passionne : l'<span className="blue">espace</span>.
+      </div>
+    ),
+    tech: [
+      { Icon: DiJavascript1, name: "Javascript" },
+      { Icon: DiReact, name: "React" },
+      { Icon: TiHtml5, name: "HTML5" },
+      { Icon: SiCsswizardry, name: "CSS3" },
+      { Icon: SiBootstrap, name: "Bootstrap" },
+      { Icon: SiLinux, name: "Linux" },
+      { Icon: SiGithub, name: "GitHub" },
+      { Icon: SiVisualstudiocode, name: "Visual Studio Code" }
+    ],
+    ghLink: "https://github.com/WolfyWin/WolfyWeb",
+    demoLink: "",
+  },
   {
     imgPath: cthulhu,
     title: "Cthulhu Game",
@@ -37,15 +67,17 @@ const projectsData = [
       </div>
     ),
     tech: [
-      DiJavascript1,
-      DiReact,
-      SiRedux,
-      TiHtml5,
-      SiCsswizardry,
-      SiPhp,
-      SiSymfony,
-      SiMysql,
-      SiVisualstudiocode
+      { Icon: DiJavascript1, name: "Javascript" },
+      { Icon: DiReact, name: "React" },
+      { Icon: SiRedux, name: "Redux" },
+      { Icon: TiHtml5, name: "HTML5" },
+      { Icon: SiCsswizardry, name: "CSS3" },
+      { Icon: SiPhp, name: "PHP" },
+      { Icon: SiSymfony, name: "Symfony" },
+      { Icon: SiMysql, name: "MySQL" },
+      { Icon: SiLinux, name: "Linux" },
+      { Icon: SiGithub, name: "GitHub" },
+      { Icon: SiPhpstorm, name: "PhpStorm" }
     ],
     ghLink: "https://github.com/WolfyWin/Cthulhu_game",
     demoLink: "",
@@ -66,12 +98,14 @@ const projectsData = [
       </div>
     ),
     tech: [
-      SiHugo,
-      TiHtml5,
-      SiCsswizardry,
-      SiBootstrap,
-      DiJavascript1,
-      SiVisualstudiocode
+      { Icon: SiHugo, name: "Hugo" },
+      { Icon: TiHtml5, name: "HTML5" },
+      { Icon: SiCsswizardry, name: "CSS3" },
+      { Icon: SiBootstrap, name: "Bootstrap" },
+      { Icon: DiJavascript1, name: "Javascript" },
+      { Icon: SiLinux, name: "Linux" },
+      { Icon: SiGithub, name: "GitHub" },
+      { Icon: SiVisualstudiocode, name: "Visual Studio Code" }
     ],
     ghLink: "https://github.com/alterlms/site",
     demoLink: "https://www.alterlms.fr/",
@@ -93,12 +127,14 @@ const projectsData = [
       </div>
     ),
     tech: [
-      TiHtml5,
-      SiCsswizardry,
-      SiPhp,
-      SiSymfony,
-      SiMysql,
-      SiVisualstudiocode
+      { Icon: TiHtml5, name: "HTML5" },
+      { Icon: SiCsswizardry, name: "CSS3" },
+      { Icon: SiPhp, name: "PHP" },
+      { Icon: SiSymfony, name: "Symfony" },
+      { Icon: SiMysql, name: "MySQL" },
+      { Icon: SiLinux, name: "Linux" },
+      { Icon: SiGithub, name: "GitHub" },
+      { Icon: SiVisualstudiocode, name: "Visual Studio Code" }
     ],
     ghLink: "https://github.com/WolfyWin/code_heroes",
     demoLink: "https://codeheroes.wolfyweb.fr/",
