@@ -26,7 +26,7 @@ const Projects = () => (
                                     {project.description}
                                 </Card.Text>
                                 <Link to={`/project-details/${project.title}`} className="project-details-link">
-                                    plus de détails
+                                    plus de détails >>
                                 </Link>
                             </Card.Body>
                         </Card>

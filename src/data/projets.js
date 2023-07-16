@@ -80,7 +80,7 @@ const projectsData = [
       { Icon: SiPhpstorm, name: "PhpStorm" }
     ],
     ghLink: "https://github.com/WolfyWin/Cthulhu_game",
-    demoLink: "",
+    demoLink: "https://cthulhu-game.wolfyweb.fr",
   },
   {
     imgPath: alterlms,
@@ -143,7 +143,7 @@ const projectsData = [
   },
   {
     imgPath: veille,
-    title: "Sensibilisation à l’accessibilité",
+    title: "Accessibilité",
     description: "Présentation et sensibilisation à l'accessibilité web des personnes neuroAtypiques dans le cadre d'une veille technologique.",
     description2:(
       <div>
@@ -160,7 +160,7 @@ const projectsData = [
   },
   {
     imgPath: autism,
-    title: "Journée mondiale de sensibilisation à l'autisme",
+    title: "Autisme",
     description: "Rédaction d'un article pour la journée mondiale de sensibilisation à l'autisme.",
     description2: (
       <div>
