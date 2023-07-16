@@ -274,7 +274,16 @@ a {
     box-shadow: none;
     border: 0;
   }
-  
+  .navbar-nav .nav-item .nav-link-custom {
+    font-size: 1.6rem;
+  }
+
+  .dropdown-item {
+    color: white;
+    font-family: 'ibm_mono', sans-serif;
+    font-size: 1.1rem;
+  }
+
   .navbar-toggler span:nth-child(1),
   .navbar-toggler span:nth-child(3) {
     transition: transform 0.35s ease-in-out;
