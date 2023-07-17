@@ -70,7 +70,7 @@ const NavBar = () => {
 
                         <NavDropdown title={<NavItemNoLink icon={GiSamusHelmet}>À propos</NavItemNoLink>}>
                             <NavDropdown.Item as={Link} to="/about" onClick={closeMenu}>Qui suis-je</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/Competency" onClick={closeMenu}>Mes compétences</NavDropdown.Item>
+                            <NavDropdown.Item as={Link} to="/skills" onClick={closeMenu}>Mes compétences</NavDropdown.Item>
                         </NavDropdown>
                         
                         <NavDropdown title={<NavItemNoLink icon={RxRocket}>Projets</NavItemNoLink>}>

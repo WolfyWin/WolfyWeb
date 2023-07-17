@@ -4,6 +4,8 @@ import { Container, Row, Col } from 'react-bootstrap'
 import Card from 'react-bootstrap/Card'
 import { Link } from 'react-router-dom'
 import { projectsData } from '../../data/projets'
+import {Icon} from '../icon/icon'
+import { MdArrowRight } from 'react-icons/md'
 
 const Projects = () => (
 
@@ -26,7 +28,7 @@ const Projects = () => (
                                     {project.description}
                                 </Card.Text>
                                 <Link to={`/project-details/${project.title}`} className="project-details-link">
-                                    plus de détails >>
+                                    plus de détails <Icon  icon={MdArrowRight} hoverText="détails"/>
                                 </Link>
                             </Card.Body>
                         </Card>

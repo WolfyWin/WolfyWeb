@@ -1,5 +1,6 @@
 import React from 'react'
-import { Container, Row, Col, Card } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
+import { Container, Row, Col, Card, Button } from 'react-bootstrap'
 import working from '../../assets/img/working.jpg'
 import avt from '../../assets/img/avt.png'
 import logo from '../../assets/img/logo.png'
@@ -140,6 +141,13 @@ const About = () => (
                     <img src={draw} alt="about" className="img-fluid" />
                 </Col>
             </Row>
+            <div className="mt-3 text-center">
+              <Button variant="start glow-on-hover">
+                <Link to={`/skills`}>
+                  <h2 className="blue"> SKILLS </h2>
+                </Link>
+              </Button>
+            </div>
         </Container>
     </Container>
 )

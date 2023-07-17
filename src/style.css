@@ -693,7 +693,9 @@ a:hover {
   text-decoration: none;
   padding-top: 10px;
 }
-
+.project-details-link > a {
+  font-size: 30px;
+}
 .project-details-link:hover {
   color: var(--imp-text-blue);
 }

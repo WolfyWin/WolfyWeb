@@ -1,9 +1,9 @@
 import React from 'react'
-
+import { Link } from 'react-router-dom'
 import { Container, Button } from 'react-bootstrap'
 import { Techstack, Toolstack} from './stack'
 
-const Competency= () => (
+const Skills= () => (
     <Container fluid className="competency-section" id="competency">
         <Container className="content">
             <div className="details">
@@ -13,12 +13,14 @@ const Competency= () => (
                 <Toolstack />
             </div>
             <div className="mt-3 text-center">
-              <Button variant="start glow-on-hover" href="/project">
-                <h4 className="blue h-projet"> Mes projets </h4>
+              <Button variant="start glow-on-hover">
+                <Link to={`/project`}>
+                  <h4 className="blue h-projet"> Mes projets </h4>
+                </Link>
               </Button>
             </div>
         </Container>
     </Container>
 )
 
-export { Competency }
+export { Skills }

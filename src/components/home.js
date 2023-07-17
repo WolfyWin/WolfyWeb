@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { Container, Row, Col, Button } from 'react-bootstrap'
 import { Terminal } from './anim/terminal'
 import { FaLinkedinIn } from 'react-icons/fa'
@@ -45,8 +46,10 @@ const Home = () => {
                                 <Terminal/>
                             </div>
                             <div className="mt-3">
-                                <Button variant="start glow-on-hover" href="/about">
+                                <Button variant="start glow-on-hover">
+                                  <Link to={`/about`}>
                                     <h2 className="blue"> START </h2>
+                                  </Link>
                                 </Button>
                             </div>
                         </Col>

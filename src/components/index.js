@@ -2,7 +2,7 @@ import Preloader from './anim/pre'
 import { particlesConfig } from './anim/particles'
 import { NavBar } from './navBar'
 import { Home } from './home'
-import { Competency } from './about/competency'
+import { Skills } from './about/skills'
 import { About } from './about/about'
 import { Projects } from './projets/projects'
 import { ProjectDetails } from './projets/details'
@@ -14,7 +14,7 @@ export  {
     particlesConfig,
     NavBar,
     Home,
-    Competency,
+    Skills,
     About,
     Projects,
     ProjectDetails,
