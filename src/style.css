@@ -555,7 +555,7 @@ a:hover {
 
 /* -------------------card-----------------------  */
 .quote-card-view {
-  background-color: rgba(0, 0, 0, 0.566);
+  background-color: rgba(15, 11, 20, 0.775);
   border: 2px solid rgba(200, 137, 230, 0.637);
   border-radius: 10px;
   box-shadow: 4px 5px 4px 3px rgb(89 4 168 / 14%);
@@ -569,7 +569,7 @@ a:hover {
 }
 
 .about-card-body p {
-  font-size: 1.4rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
