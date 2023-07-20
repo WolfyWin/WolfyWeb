@@ -3,7 +3,7 @@ import { Container, Form, Button, Row, Col } from 'react-bootstrap'
 import { SocialIcon  } from './icon/icon'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { AiFillGithub } from 'react-icons/ai'
-import contact from '../assets/img/contact.png'
+import contact from '../assets/img/contact.webp'
 
 const Contact = () => {
 
@@ -55,7 +55,7 @@ const Contact = () => {
                 <div className="text-center">
                     <h1 className="heading neon">Contact</h1>
                 </div>
-                <Row className="d-flex justify-content-between pt-3">
+                <Row className="d-flex justify-content-between pt-5">
                     <Col md={6} className="container-card">
                         <div className="contact-card">
                             <div className="profileimage">

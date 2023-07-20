@@ -1,9 +1,9 @@
-import codeheroes from '../assets/img/Projects/codeheroes.png'
-import alterlms from '../assets/img/Projects/alterlms.png'
-import cthulhu from '../assets/img/Projects/cthulhu.png'
-import veille from '../assets/img/Projects/veille.png'
-import autism from '../assets/img/Projects/autism.png'
-import ww from '../assets/img/Projects/ww.png'
+import codeheroes from '../assets/img/Projects/codeheroes.webp'
+import alterlms from '../assets/img/Projects/alterlms.webp'
+import cthulhu from '../assets/img/Projects/cthulhu.webp'
+import veille from '../assets/img/Projects/veille.webp'
+import autism from '../assets/img/Projects/autism.webp'
+import ww from '../assets/img/Projects/ww.webp'
 import { 
   TiHtml5,
   SiCsswizardry,

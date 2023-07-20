@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { Container, Row, Col, Card, Button } from 'react-bootstrap'
-import working from '../../assets/img/working.jpg'
-import avt from '../../assets/img/avt.png'
-import logo from '../../assets/img/logo.png'
-import ripley from '../../assets/img/ripley.png'
-import draw from '../../assets/img/draw.png'
+import funny from '../../assets/img/funny.webp'
+import hobbies from '../../assets/img/hobbies.webp'
+import logo from '../../assets/img/logo.webp'
+import ripley from '../../assets/img/ripley.webp'
+import space from '../../assets/img/space.svg'
 import { ImStarEmpty } from 'react-icons/im'
 
 const About = () => (
@@ -48,12 +48,12 @@ const About = () => (
                     </Card>
                 </Col>
                 <Col md={5} className="px-5 about-img order-1 order-md-2">
-                    <img src={working} alt="about" className="about-working img-fluid rounded-circle" />
+                    <img src={funny} alt="about" className="about-funny img-fluid" />
                 </Col>
             </Row>
             <Row className="about-row">
                 <Col md={5} className="px-5 about-img order-1 order-md-1">
-                    <img src={avt} alt="about" className="about-avt img-fluid" />
+                    <img src={hobbies} alt="about" className="about-hobbies img-fluid" />
                 </Col>
                 <Col md={7} className="order-2 order-md-2" >
                     <Card className="quote-card-view">
@@ -138,7 +138,7 @@ const About = () => (
                     </Card>
                 </Col>
                 <Col md={5} className="px-5 about-img order-1 order-md-2">
-                    <img src={draw} alt="about" className="img-fluid" />
+                    <img src={space} alt="about" className="img-fluid" />
                 </Col>
             </Row>
             <div className="mt-3 text-center">

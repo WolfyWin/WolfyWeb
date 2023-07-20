@@ -4,7 +4,7 @@ import { Container, Row, Col, Button } from 'react-bootstrap'
 import { Terminal } from './anim/terminal'
 import { FaLinkedinIn } from 'react-icons/fa'
 import { AiFillGithub } from 'react-icons/ai'
-import { MyAvatar } from './anim/myAvatar'
+import myAvatar from '../assets/img/avatar.webp'
 import { SocialIcon  } from './icon/icon'
 
 const Home = () => {
@@ -54,7 +54,7 @@ const Home = () => {
                             </div>
                         </Col>
                         <Col md={6} className="home-image">
-                            <MyAvatar />
+                        <img src={myAvatar} alt="about" className="myAvatar img-fluid rounded-circle" />
                             <div className="home-about-social">
                                 <SocialIcon className="home-social-icons mx-2" href="https://github.com/WolfyWin" icon={AiFillGithub} hoverText="GitHub"/>
                                 <SocialIcon className="home-social-icons mx-2" href="https://www.linkedin.com/in/rebeccatinchon/" icon={FaLinkedinIn} hoverText="LinkedIn"/>

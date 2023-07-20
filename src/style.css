@@ -70,6 +70,13 @@ html {
   text-shadow: 0 0 15px #10001e;
 }
 
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
 .neon {
   background: #8134CF;
   background: -webkit-radial-gradient(circle farthest-side at top center, #8134CF 15%, #37f5f5 82%);
@@ -90,23 +97,14 @@ html {
 }
 
 body {
+  position: relative;
   margin: 0;
   font-family: 'ibm_regular', sans-serif;
   color: var(--imp-text-default);
-}
+  background: #0f0c29;
+  background: -webkit-linear-gradient(to right, #2a243e, #302b63, #170c29);
+  background: linear-gradient(to right, #2a243e, #302b63, #170c29);
 
-body::before {
-  content: "";
-  display: block;
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-image: url(./assets/background/purple.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  z-index: -1;
 }
 
 a {
@@ -165,7 +163,7 @@ a {
 
 /* ------------------------------------ Navbar------------------------------------  */
 .sticky {
-  background-color: rgba(170, 127, 247, 0.22);
+  background-color: #40375eaf;
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171);
   backdrop-filter: blur(15px);
   transition: all 0.5s ease 0s;
@@ -211,13 +209,16 @@ a {
   transition: all 0.3s ease-out 0s;
   position: relative;
   z-index: 1;
-  font-size: 1.4rem;
+  font-size: 1.8rem;
+  color: white;
 }
 
 .nav-link-custom .nav-icon {
   transition: all 0.1s ease 0s;
   margin-bottom: 4px; 
-  margin-right: 5px;
+  margin-right: 10px;
+  font-size: 2.5rem;
+  color: var(--imp-text-blue);
 }
 
 .nav-link-custom:hover .nav-icon {
@@ -229,24 +230,26 @@ a {
 }
 
 .dropdown-menu{
-  background-color: rgba(170, 140, 234, 0.6);
+  background-color:  #4c4468ce;
+  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.583);
 }
 
 .dropdown-item{
   color: white;
   font-family: 'ibm_mono', sans-serif;
+  font-size: 1.4rem;
 }
 
 .dropdown-item:hover {
   color: var(--imp-text-blue);
-  background-color: #2f244cd4;
+  background-color: transparent;
 }
 
 @media (max-width: 1024px) {
   .navbar {
     padding: 1rem 2rem;
     font-size: 1.5rem;
-    background-color: rgba(170, 140, 234, 0.45);
+    background-color:  #4c4468af;
     backdrop-filter: blur(15px);
   }
 
@@ -334,7 +337,6 @@ a {
   .navbar {
     padding: 1rem 2rem;
     font-size: 1.8rem;
-    background-color: rgba(170, 140, 234, 0.45);
   }
   
   .navbar-toggler {
@@ -407,7 +409,7 @@ a {
 }
 
 .heading {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 @media (min-width: 768px) {
@@ -420,7 +422,7 @@ a {
 .home-about-section {
   padding-bottom: 70px;
   padding-top: 70px;
-  background-image:  url(./assets/background/diamond.png);
+  background-image:  url(./assets/background/pixel.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
@@ -449,11 +451,18 @@ a {
   overflow-x: auto;
 }
 
+.myAvatar {
+  width: 70%;
+  height: auto;
+}
+
 .home-image {
   justify-content: center;
   align-items: center;
   display: flex;
   flex-direction: column;
+  position: relative;
+  z-index: 1;
 }
 
 .avatar {
@@ -532,6 +541,10 @@ a:hover {
 
 .about-img {
   padding-bottom: 15px;
+}
+
+.about-funny {
+  justify-content: center;
 }
 
 .about-card-list {
@@ -750,7 +763,7 @@ a:hover {
 .details-title {
   font-family: 'mokoto', sans-serif;
   color: rgb(103, 63, 215);
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   padding-top: 15px;
   padding-bottom: 10px;
 }
@@ -866,12 +879,12 @@ a:hover {
   flex-direction: column;
 }
 .contact-card {
-  width: 50%;
+  width: 60%;
   text-align: center;
   border-radius: 1.5em;
   padding: 10px;
-  background-color: rgba(15, 11, 20, 0.593);
-  box-shadow: 5px 5px 30px rgb(74, 46, 99), -5px -5px 30px rgb(121, 75, 165);
+  background-color: rgba(15, 11, 20, 0.671);
+  box-shadow: 1px 1px 5px rgb(0, 255, 94), -5px -5px 15px  rgb(55, 245, 245);
 }
 
 .profileimage {
@@ -884,7 +897,8 @@ a:hover {
 
 .profile {
   border-radius: 50%;
-  width: 60%;
+  width: 90%;
+  background-color: #389d9d;
 }
 
 .contact-card-info {
@@ -947,9 +961,9 @@ a:hover {
 /* --------------------------------------  */
 
 .container-form {
-  background-color: rgba(15, 11, 20, 0.593);
+  background-color: rgba(15, 11, 20, 0.671);
   border-radius: 10px;
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137);
+  box-shadow: 1px 1px 5px rgb(0, 255, 94), -5px -5px 15px  rgb(55, 245, 245);
   padding: 20px;
 }
 
@@ -1006,7 +1020,8 @@ a:hover {
 /* ------------------------------------ Footer---------------------------------------------*/
 
 .footer {
-  background-color: rgb(168, 146, 207);
+  position: absolute;
+  background-color: #40375eaf;
 }
 
 .footer-copywright{
@@ -1014,8 +1029,8 @@ a:hover {
 }
 
 .footer h3 {
-  color: white;
-  text-shadow: 0 0 15px #673ab7;
+  color: var(--imp-text-blue);
+  text-shadow: 0 0 20px #000000;
   font-size: 1.3rem;
   font-family: 'ibm_mono', sans-serif;
 }
@@ -1029,10 +1044,11 @@ a:hover {
 
 .footer-icons svg {
   font-size: 1.2rem;
+  color: white;
 }
 
 .footer-icons svg:hover {
-  box-shadow: 0 0 15px var(--imp-text-blue)
+  box-shadow: 0 0 15px var(--imp-text-blue);
 }
 
 .social-icons {

@@ -5,7 +5,7 @@ import { BiPlanet } from 'react-icons/bi'
 import { RxRocket } from 'react-icons/rx'
 import { GiSamusHelmet } from 'react-icons/gi'
 import { MdMailOutline } from 'react-icons/md'
-import logo from '../assets/img/logo.png'
+import logo from '../assets/img/logo.webp'
 import { debounce } from 'lodash'
 
 const useScrollHandler = (handler, delay) => {
