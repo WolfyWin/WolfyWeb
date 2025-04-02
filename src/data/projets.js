@@ -4,24 +4,15 @@ import cthulhu from '../assets/img/Projects/cthulhu.webp'
 import veille from '../assets/img/Projects/veille.webp'
 import autism from '../assets/img/Projects/autism.webp'
 import ww from '../assets/img/Projects/ww.webp'
-import { 
-  TiHtml5,
-  SiCsswizardry,
-  SiPhp,
-  SiSymfony,
-  DiJavascript1,
-  DiReact,
-  SiRedux,
-  SiHugo,
-  SiMysql,
-  SiBootstrap,
-  SiVisualstudiocode,
-  SiLinux,
-  SiGithub,
-  SiPhpstorm
-} from '../data/stack.js'
-import { codeSlides, alterSlides } from '../assets/img/slides'
+import haku from '../assets/img/Projects/haku.webp'
 
+import {
+  SiHtml5, SiReact, SiJavascript, SiVisualstudiocode, SiPhpstorm, SiGithub, SiCss3, SiPhp, SiRedux, SiSymfony, SiBootstrap, SiHugo, SiVuedotjs, SiQuasar, SiSass, SiLaravel, SiGit,
+} from 'react-icons/si'
+import {FcLinux} from 'react-icons/fc'
+import { GrMysql } from 'react-icons/gr'
+
+import { codeSlides, alterSlides, tsaSlides } from '../assets/img/slides'
 
 const projectsData = [
   {
@@ -38,22 +29,55 @@ const projectsData = [
       </div>
     ),
     tech: [
-      { Icon: DiJavascript1, name: "Javascript" },
-      { Icon: DiReact, name: "React" },
-      { Icon: TiHtml5, name: "HTML5" },
-      { Icon: SiCsswizardry, name: "CSS3" },
-      { Icon: SiBootstrap, name: "Bootstrap" },
-      { Icon: SiLinux, name: "Linux" },
-      { Icon: SiGithub, name: "GitHub" },
-      { Icon: SiVisualstudiocode, name: "Visual Studio Code" }
+      { Icon: SiJavascript, name: "Javascript", color: "#f0dc4e" },
+      { Icon: SiReact, name: "React", color: "#61DAFB" },
+      { Icon: SiHtml5, name: "HTML5", color: "#E34F26" },
+      { Icon: SiCss3, name: "CSS3", color: "#214ce5" },
+      { Icon: SiBootstrap, name: "Bootstrap", color: "#7952B3" },
+      { Icon: FcLinux, name: "Linux" },
+      { Icon: SiGithub, name: "GitHub", color: "#6170c2" },
+      { Icon: SiGit, name: "Git", color: "#F05032" },
+      { Icon: SiVisualstudiocode, name: "Visual Studio Code", color: "#007ACC" },
+      { Icon: SiPhpstorm, name: "PhpStorm", color: "#ef32a2" }
     ],
     ghLink: "https://github.com/WolfyWin/WolfyWeb",
     demoLink: "",
   },
   {
+    imgPath: haku,
+    title: "Haku",
+    description: "Haku est un personal Management system encore en cours de développement.",
+    description2: (
+      <div>
+        Le projet "Haku App" est un Personal Management System, une application d'accompagnement aux taches du quotidien, comme les listes de courses, de choses à faire, de gestion des dépenses ou encore du bien-être.
+        <br />
+        Il est réalisé en Vue.js (quasar framework), PHP, Laravel et encore en cours de développement.
+        <br />
+        Haku est developpé en collaboration avec <a href="https://www.linkedin.com/in/pierre-briffaux-396008151/" target="_blank" rel="noopener noreferrer" className="purple">Pierre Briffaux</a>.
+        <br />
+      </div>
+    ),
+    tech: [
+      { Icon: SiJavascript, name: "Javascript", color: "#f0dc4e" },
+      { Icon: SiHtml5, name: "HTML5", color: "#E34F26" },
+      { Icon: SiCss3, name: "CSS3", color: "#214ce5" },
+      { Icon: SiPhp, name: "PHP", color: "#8993be" },
+      { Icon: SiSass, name: "Sass", color: "#CC6699" },
+      { Icon: GrMysql, name: "MySQL", color: "#4479a1" },
+      { Icon: FcLinux, name: "Linux" },
+      { Icon: SiGithub, name: "GitHub", color: "#6170c2" },
+      { Icon: SiGit, name: "Git", color: "#F05032" },
+      { Icon: SiPhpstorm, name: "PhpStorm", color: "#ef32a2" },
+      { Icon: SiVuedotjs, name: "Vue.js", color: "#4FC08D" },
+      { Icon: SiQuasar, name: "Quasar", color: "#00b4ff" },
+      { Icon: SiLaravel, name: "Laravel", color: "#FF2D20" },
+    ],
+    demoLink: "https://haku-app.wolfyweb.fr",
+  },
+  {
     imgPath: cthulhu,
     title: "Cthulhu Game",
-    description: "Cthulhu game est un jeu de Morpion initialement développé en react integré dans Symfony.",
+    description: "Cthulhu game est un jeu de Morpion développé en react et intégré dans Symfony.",
     description2: (
       <div>
         Le projet "Cthulhu Game" est un jeu de morpion créé en utilisant React et intégré dans une application Symfony.
@@ -67,17 +91,18 @@ const projectsData = [
       </div>
     ),
     tech: [
-      { Icon: DiJavascript1, name: "Javascript" },
-      { Icon: DiReact, name: "React" },
-      { Icon: SiRedux, name: "Redux" },
-      { Icon: TiHtml5, name: "HTML5" },
-      { Icon: SiCsswizardry, name: "CSS3" },
-      { Icon: SiPhp, name: "PHP" },
+      { Icon: SiJavascript, name: "Javascript", color: "#f0dc4e" },
+      { Icon: SiReact, name: "React", color: "#61DAFB" },
+      { Icon: SiRedux, name: "Redux", color: "#764ABC" },
+      { Icon: SiHtml5, name: "HTML5", color: "#E34F26" },
+      { Icon: SiCss3, name: "CSS3", color: "#214ce5" },
+      { Icon: SiPhp, name: "PHP", color: "#8993be" },
       { Icon: SiSymfony, name: "Symfony" },
-      { Icon: SiMysql, name: "MySQL" },
-      { Icon: SiLinux, name: "Linux" },
-      { Icon: SiGithub, name: "GitHub" },
-      { Icon: SiPhpstorm, name: "PhpStorm" }
+      { Icon: GrMysql, name: "MySQL", color: "#4479a1" },
+      { Icon: FcLinux, name: "Linux" },
+      { Icon: SiGithub, name: "GitHub", color: "#6170c2" },
+      { Icon: SiGit, name: "Git", color: "#F05032" },
+      { Icon: SiPhpstorm, name: "PhpStorm", color: "#ef32a2" }
     ],
     ghLink: "https://github.com/WolfyWin/Cthulhu_game",
     demoLink: "https://cthulhu-game.wolfyweb.fr",
@@ -98,17 +123,17 @@ const projectsData = [
       </div>
     ),
     tech: [
-      { Icon: SiHugo, name: "Hugo" },
-      { Icon: TiHtml5, name: "HTML5" },
-      { Icon: SiCsswizardry, name: "CSS3" },
-      { Icon: SiBootstrap, name: "Bootstrap" },
-      { Icon: DiJavascript1, name: "Javascript" },
-      { Icon: SiLinux, name: "Linux" },
-      { Icon: SiGithub, name: "GitHub" },
-      { Icon: SiVisualstudiocode, name: "Visual Studio Code" }
+      { Icon: SiHugo, name: "Hugo", color: "#FF4088" },
+      { Icon: SiHtml5, name: "HTML5", color: "#E34F26" },
+      { Icon: SiCss3, name: "CSS3", color: "#214ce5" },
+      { Icon: SiBootstrap, name: "Bootstrap", color: "#7952B3" },
+      { Icon: SiJavascript, name: "Javascript", color: "#f0dc4e" },
+      { Icon: FcLinux, name: "Linux" },
+      { Icon: SiGithub, name: "GitHub", color: "#6170c2" },
+      { Icon: SiGit, name: "Git", color: "#F05032" },
+      { Icon: SiVisualstudiocode, name: "Visual Studio Code", color: "#007ACC" }
     ],
     ghLink: "https://github.com/alterlms/site",
-    demoLink: "https://www.alterlms.fr/",
     slides: alterSlides,
   },
   {
@@ -127,14 +152,15 @@ const projectsData = [
       </div>
     ),
     tech: [
-      { Icon: TiHtml5, name: "HTML5" },
-      { Icon: SiCsswizardry, name: "CSS3" },
-      { Icon: SiPhp, name: "PHP" },
+      { Icon: SiHtml5, name: "HTML5", color: "#E34F26" },
+      { Icon: SiCss3, name: "CSS3", color: "#214ce5" },
+      { Icon: SiPhp, name: "PHP", color: "#8993be" },
       { Icon: SiSymfony, name: "Symfony" },
-      { Icon: SiMysql, name: "MySQL" },
-      { Icon: SiLinux, name: "Linux" },
-      { Icon: SiGithub, name: "GitHub" },
-      { Icon: SiVisualstudiocode, name: "Visual Studio Code" }
+      { Icon: GrMysql, name: "MySQL", color: "#4479a1" },
+      { Icon: FcLinux, name: "Linux" },
+      { Icon: SiGithub, name: "GitHub", color: "#6170c2" },
+      { Icon: SiGit, name: "Git", color: "#F05032" },
+      { Icon: SiVisualstudiocode, name: "Visual Studio Code", color: "#007ACC" }
     ],
     ghLink: "https://github.com/WolfyWin/code_heroes",
     demoLink: "https://codeheroes.wolfyweb.fr/",
@@ -144,7 +170,7 @@ const projectsData = [
   {
     imgPath: veille,
     title: "Accessibilité",
-    description: "Présentation et sensibilisation à l'accessibilité web des personnes neuroAtypiques dans le cadre d'une veille technologique.",
+    description: "Sensibilisation à l'accessibilité web des personnes neuroAtypiques dans le cadre d'une veille technologique.",
     description2:(
       <div>
         Ce projet est une initiative réalisée dans le cadre d'une veille technologique lors de ma formation à la Wild Code School et présenté aux autres développeurs. 
@@ -156,7 +182,8 @@ const projectsData = [
         Ce projet a ainsi permis de souligner l'importance de l'empathie et de la considération pour tous les utilisateurs dans la conception et le développement.
       </div>
     ),
-    demoLink: "https://drive.google.com/file/d/1gsQKqImI4JQN4oT3pb0so32PIR-8Tv-P/view"
+    demoLink: "https://drive.google.com/file/d/1gsQKqImI4JQN4oT3pb0so32PIR-8Tv-P/view",
+    slides: tsaSlides
   },
   {
     imgPath: autism,

@@ -10,14 +10,14 @@ import { Contact } from './contact'
 import { Footer } from './footer'
 
 export  {
-    Preloader,
-    particlesConfig,
-    NavBar,
-    Home,
-    Skills,
-    About,
-    Projects,
-    ProjectDetails,
-    Contact,
-    Footer
+  Preloader,
+  particlesConfig,
+  NavBar,
+  Home,
+  Skills,
+  About,
+  Projects,
+  ProjectDetails,
+  Contact,
+  Footer
 }

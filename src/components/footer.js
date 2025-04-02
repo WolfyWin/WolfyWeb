@@ -10,7 +10,7 @@ const Footer = () => {
       <Container className="pt-3 pb-4">
         <Row className="footer-row">
           <Col md={8} className="footer-copywright">
-            <h3>© Copyright 2023 - WolfyWeb</h3>
+            <h3>© Copyright 2025 - WolfyWeb</h3>
           </Col>
           <Col md={4} className="footer-socials pt-2">
             <div className="social-icons">
