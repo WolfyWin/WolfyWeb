@@ -116,10 +116,14 @@ a {
   max-height: 100%;
 }
 
+.img-avatar {
+    max-width: 70%;
+}
+
 .heading {
   font-family: 'mokoto_glitch_mk2', sans-serif;
   display: inline-block;
-  font-size: 2.3em;
+  font-size: 2em;
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
@@ -163,9 +167,10 @@ a {
 
 /* ------------------------------------ Navbar------------------------------------  */
 .sticky {
-  background-color: #40375eaf;
+  /*background-color: #40375eaf;*/
+  background-color: rgba(0, 0, 0, 0.400);
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171);
-  backdrop-filter: blur(15px);
+  /*backdrop-filter: blur(15px);*/
   transition: all 0.5s ease 0s;
 }
 
@@ -210,7 +215,7 @@ a {
   position: relative;
   z-index: 1;
   display: inline-block;
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   color: white;
 }
 
@@ -219,8 +224,8 @@ a {
   align-items: center;
   justify-content: center;
   transition: all 0.1s ease 0s;
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   margin-bottom: 4px; 
   margin-right: 10px;
   font-size: 2.5rem;
@@ -247,7 +252,9 @@ a {
 }
 
 .dropdown-menu{
-  background-color:  #4c4468ce;
+  /*,*/
+  background-color: rgba(0, 0, 0, 0.400);
+  backdrop-filter: blur(15px);
   box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.583);
 }
 
@@ -266,8 +273,9 @@ a {
   .navbar {
     padding: 1rem 2rem;
     font-size: 1.5rem;
-    background-color:  #4c4468af;
-    backdrop-filter: blur(15px);
+    /*background-color:  #4c4468af;*/
+    background-color: rgba(0, 0, 0, 0.400);
+    backdrop-filter: blur(10px);
   }
 
   .navbar-toggler {
@@ -278,7 +286,7 @@ a {
   
   .navbar-toggler span {
     display: block;
-    background-color: #ffffff;
+    background-color: var(--imp-text-blue);
     height: 3px;
     width: 27px;
     margin-top: 5px;
@@ -295,7 +303,7 @@ a {
     border: 0;
   }
   .navbar-nav .nav-item .nav-link-custom {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 
   .dropdown-item {
@@ -401,7 +409,8 @@ a {
   text-align: center;
   background-color: rgba(0, 0, 0, 0.517);
   border-radius: 10px;
-  box-shadow: 4px 5px 4px 3px rgb(89 4 168 / 14%);
+  /*box-shadow: 4px 5px 4px 3px rgb(89 4 168 / 14%);*/
+  border: 2px solid rgba(200, 137, 230, 0.637);
   font-family: 'ibm_mono', sans-serif;
 }
 
@@ -425,9 +434,9 @@ a {
   font-family: 'mokoto', sans-serif;
 }
 
-.heading {
-  font-size: 2.5rem;
-}
+/*.heading {*/
+/*  font-size: 2.5rem;*/
+/*}*/
 
 @media (min-width: 768px) {
   .home-header .heading {
@@ -439,10 +448,10 @@ a {
 .home-about-section {
   padding-bottom: 70px;
   padding-top: 70px;
-  background-image:  url(./assets/background/pixel.svg);
+  background-image:  url(./assets/background/aqua.png);
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: scroll;
 }
 
 .home-terminal {
@@ -541,7 +550,6 @@ a:hover {
 
 /* ------------------------------------ About-------------------------------------------  */
 .about-section {
-  z-index: -1;
   padding-bottom: 30px;
   padding-top: 30px;
   position: relative;
@@ -576,6 +584,14 @@ a:hover {
   border-radius: 10px;
   box-shadow: 4px 5px 4px 3px rgb(89 4 168 / 14%);
   padding: 1em;
+}
+
+.about-card-title {
+    font-family: 'ibm_mono', sans-serif;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
 .about-card-body {
@@ -695,7 +711,7 @@ a:hover {
 
 .project-card-view {
   box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.14);
-  background-color: rgba(0, 0, 0, 0.515);
+  background-color: rgba(0, 0, 0, 0.517);
   transition: all 0.5s ease 0s;
   border-radius: 10px;
   color: white;
@@ -703,13 +719,13 @@ a:hover {
 }
 
 .project-card-view:hover {
-  box-shadow: 1px 1px 5px rgb(0, 255, 94), -5px -5px 15px  rgb(55, 245, 245);
+  box-shadow: 1px 1px 5px rgb(55, 245, 245), -5px -5px 15px rgb(129, 52, 207);
   transform: scale(1.1);
 }
 
 .card-img-top {
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 30px;
   width: 100%;
 }
 
@@ -722,9 +738,11 @@ a:hover {
   text-decoration: none;
   padding-top: 10px;
 }
+
 .project-details-link > a {
   font-size: 30px;
 }
+
 .project-details-link:hover {
   color: var(--imp-text-blue);
 }
@@ -897,10 +915,12 @@ a:hover {
 .contact-card {
   width: 60%;
   text-align: center;
-  border-radius: 1.5em;
   padding: 10px;
   background-color: rgba(15, 11, 20, 0.671);
-  box-shadow: 1px 1px 5px rgb(0, 255, 94), -5px -5px 15px  rgb(55, 245, 245);
+  border: 2px solid rgba(200, 137, 230, 0.637);
+  border-radius: 10px;
+  box-shadow: 4px 5px 4px 3px rgb(89 4 168 / 14%);
+  /*box-shadow: 1px 1px 5px rgb(0, 255, 94), -5px -5px 15px  rgb(55, 245, 245);*/
 }
 
 .profileimage {
@@ -914,7 +934,9 @@ a:hover {
 .profile {
   border-radius: 50%;
   width: 90%;
-  background-color: #389d9d;
+  background-image:  url(./assets/background/aqua.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .contact-card-info {
@@ -979,8 +1001,10 @@ a:hover {
 .container-form {
   background-color: rgba(15, 11, 20, 0.671);
   border-radius: 10px;
-  box-shadow: 1px 1px 5px rgb(0, 255, 94), -5px -5px 15px  rgb(55, 245, 245);
-  padding: 20px;
+  /*box-shadow: 1px 1px 5px rgb(0, 255, 94), -5px -5px 15px  rgb(55, 245, 245);*/
+  padding: 10px;
+  border: 2px solid rgba(200, 137, 230, 0.637);
+  box-shadow: 4px 5px 4px 3px rgb(89 4 168 / 14%);
 }
 
 .form-contact {
@@ -1037,7 +1061,8 @@ a:hover {
 
 .footer {
   position: absolute;
-  background-color: #40375eaf;
+  /*background-color: #40375eaf;*/
+    background-color: rgba(0, 0, 0, 0.400);
 }
 
 .footer-row {
@@ -1051,7 +1076,7 @@ a:hover {
 .footer h3 {
   color: var(--imp-text-blue);
   text-shadow: 0 0 20px #000000;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-family: 'ibm_mono', sans-serif;
 }
 
@@ -1066,7 +1091,7 @@ a:hover {
   justify-content: center;
   width: 35px;
   height: 35px;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   transition: 0.5s;
   color: white;
 }
@@ -1083,6 +1108,7 @@ a:hover {
 }
 
 @media (max-width: 767px) {
+
   .footer-copywright {
     text-align: center;
   }
@@ -1132,7 +1158,6 @@ a:hover {
 
 .glow-on-hover {
   font-family: 'mokoto', sans-serif;
-  width: 250px;
   border: none;
   outline: none;
   background: rgb(96, 71, 139);

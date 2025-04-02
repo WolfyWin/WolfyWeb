@@ -1,47 +1,37 @@
 import React, { useState }from 'react'
 import { Col, Row } from 'react-bootstrap'
-import { 
-  TiHtml5,
-  SiCsswizardry,
-  SiPhp, SiSymfony,
-  DiJavascript1,
-  DiReact,
-  SiRedux,
-  DiGit,
-  SiHugo,
-  SiMysql,
-  SiBootstrap,
-  DiSass,
-  DiLess,
-  SiLinux,
-  SiWindows,
-  SiVisualstudiocode,
-  SiPhpstorm,
-  SiGithub
-} from '../../data/stack.js'
+import {
+  SiHtml5, SiReact, SiGit, SiSass, SiLess, SiJavascript, SiWindows, SiVisualstudiocode, SiPhpstorm, SiGithub, SiCss3,
+  SiPhp, SiRedux, SiSymfony, SiLaravel, SiBootstrap, SiHugo, SiVuedotjs, SiQuasar
+} from 'react-icons/si'
+import { FcLinux } from 'react-icons/fc'
+import { GrMysql } from 'react-icons/gr'
 
 const techs = [
-  { Icon: TiHtml5, name: "HTML5" },
-  { Icon: SiCsswizardry, name: "CSS3" },
-  { Icon: SiPhp, name: "PHP" },
-  { Icon: SiSymfony, name: "Symfony" },
-  { Icon: DiJavascript1, name: "Javascript" },
-  { Icon: DiReact, name: "React" },
-  { Icon: SiRedux, name: "Redux" },
-  { Icon: DiGit, name: "Git" },
-  { Icon: SiHugo, name: "Hugo" },
-  { Icon: SiMysql, name: "MySQL" },
-  { Icon: SiBootstrap, name: "Bootstrap" },
-  { Icon: DiSass, name: "Sass" },
-  { Icon: DiLess, name: "Less" }
+  { Icon: SiHtml5, name: "HTML5", color: "#E34F26" },
+  { Icon: SiCss3, name: "CSS3", color: "#214ce5" },
+  { Icon: SiPhp, name: "PHP", color: "#8993be" },
+  { Icon: SiSymfony, name: "Symfony"},
+  { Icon: SiLaravel, name: "Laravel", color: "#FF2D20" },
+  { Icon: SiJavascript, name: "Javascript", color: "#f0dc4e" },
+  { Icon: SiReact, name: "React", color: "#61DAFB" },
+  { Icon: SiRedux, name: "Redux", color: "#764ABC" },
+  { Icon: SiGit, name: "Git", color: "#F05032" },
+  { Icon: SiHugo, name: "Hugo", color: "#FF4088" },
+  { Icon: GrMysql, name: "MySQL", color: "#4479a1" },
+  { Icon: SiBootstrap, name: "Bootstrap", color: "#7952B3" },
+  { Icon: SiSass, name: "Sass", color: "#CC6699" },
+  { Icon: SiLess, name: "Less", color: "#1D365D" },
+  { Icon: SiVuedotjs, name: "Vue.js", color: "#4FC08D" },
+  { Icon: SiQuasar, name: "Quasar", color: "#00b4ff" },
 ]
 
 const tools = [
-  { Icon: SiLinux, name: "Linux" },
-  { Icon: SiWindows, name: "Windows" },
-  { Icon: SiVisualstudiocode, name: "Visual Studio Code" },
-  { Icon: SiPhpstorm, name: "PhpStorm" },
-  { Icon: SiGithub, name: "GitHub" }
+  { Icon: FcLinux, name: "Linux" },
+  { Icon: SiWindows, name: "Windows", color: "#0078D6" },
+  { Icon: SiPhpstorm, name: "PhpStorm", color: "#ef32a2" },
+  { Icon: SiGithub, name: "GitHub", color: "#6170c2" },
+  { Icon: SiVisualstudiocode, name: "Visual Studio Code", color: "#007ACC" }
 ]
 
 const Stack = ({items}) => {
@@ -57,7 +47,7 @@ const Stack = ({items}) => {
       {items.map((item, index) => (
         <Col xs={4} md={2} className="tech-icons" key={index}>
           <div data-aos="fade-up" onTouchStart={() => handleTouch(item.name)} onMouseEnter={() => setTooltip(item.name)} onMouseLeave={() => setTooltip(null)}>
-            <item.Icon />
+            <item.Icon color={item.color} />
             {tooltip === item.name && 
               <div className="tooltip">
                 <h3>{item.name}</h3>

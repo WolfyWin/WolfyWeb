@@ -9,82 +9,78 @@ import logo from '../assets/img/logo.webp'
 import { debounce } from 'lodash'
 
 const useScrollHandler = (handler, delay) => {
-    const debouncedHandler = useMemo(() => debounce(handler, delay), [handler, delay])
-
-    useEffect(() => {
-        window.addEventListener('scroll', debouncedHandler);
-        return () => window.removeEventListener('scroll', debouncedHandler)
-    }, [debouncedHandler])
+  const debouncedHandler = useMemo(() => debounce(handler, delay), [handler, delay])
+  useEffect(() => {
+    window.addEventListener('scroll', debouncedHandler);
+    return () => window.removeEventListener('scroll', debouncedHandler)
+  }, [debouncedHandler])
 }
 
 const NavItem = ({ to, icon: Icon, children, closeMenu }) => {
   return (
-      <span>
-          <Nav.Link as={Link} to={to} className="nav-link-custom" onClick={closeMenu}>
-              <Icon className="nav-icon" />
-              <span className="nav-text">{children}</span>
-          </Nav.Link>
-      </span>
+    <span>
+      <Nav.Link as={Link} to={to} className="nav-link-custom" onClick={closeMenu}>
+        <Icon className="nav-icon" />
+        <span className="nav-text">{children}</span>
+      </Nav.Link>
+    </span>
   )
 }
 
 const NavItemNoLink = ({ icon: Icon, children }) => {
   return (
-      <span className="nav-link-custom">
-          <Icon className="nav-icon" />
-          <span className="nav-text">{children}</span>
-      </span>
+    <span className="nav-link-custom">
+      <Icon className="nav-icon" />
+      <span className="nav-text">{children}</span>
+    </span>
   )
 }
 
 const NavBar = () => {
-    const [navColour, setNavColour] = useState(false)
-    const [isOpen, setIsOpen] = useState(false)
-    
-    const location = useLocation()
+  const [navColour, setNavColour] = useState(false)
+  const [isOpen, setIsOpen] = useState(false)
+  const location = useLocation()
 
-    const scrollHandler = useCallback(() => { setNavColour(window.scrollY >= 20) }, [])
+  const scrollHandler = useCallback(() => { setNavColour(window.scrollY >= 20) }, [])
+  useScrollHandler(scrollHandler, 200)
 
-    useScrollHandler(scrollHandler, 200)
+  const closeMenu = () => { setIsOpen(false) }
 
-    const closeMenu = () => { setIsOpen(false) }
+  return (
+    <Navbar collapseOnSelect expand="lg" fixed="top" className={navColour ? 'sticky' : 'navbar'} onToggle={() => setIsOpen(!isOpen)} expanded={isOpen}>
+      <Container>
+        <Navbar.Brand as={Link} to="/">
+          <img src={logo} className="img-fluid logo" alt="brand" />
+        </Navbar.Brand>
 
+        <Navbar.Toggle aria-controls="responsive-navbar-nav">
+          <span></span>
+          <span></span>
+          <span></span>
+        </Navbar.Toggle>
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="ms-auto" defaultActiveKey={location.pathname}>
+            <Nav.Item>
+              <NavItem to="/" icon={BiPlanet} closeMenu={closeMenu}>Home</NavItem>
+            </Nav.Item>
 
-    return (
-        <Navbar collapseOnSelect expand="lg" fixed="top" className={navColour ? 'sticky' : 'navbar'} onToggle={() => setIsOpen(!isOpen)} expanded={isOpen}>
-            <Container>
-                <Navbar.Brand as={Link} to="/">
-                    <img src={logo} className="img-fluid logo" alt="brand" />
-                </Navbar.Brand>
+            <NavDropdown title={<NavItemNoLink icon={GiSamusHelmet}>À propos</NavItemNoLink>}>
+              <NavDropdown.Item as={Link} to="/about" onClick={closeMenu}>Qui suis-je</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/skills" onClick={closeMenu}>Mes compétences</NavDropdown.Item>
+            </NavDropdown>
 
-                <Navbar.Toggle aria-controls="responsive-navbar-nav">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-                </Navbar.Toggle>
-                <Navbar.Collapse id="responsive-navbar-nav">
-                    <Nav className="ms-auto" defaultActiveKey={location.pathname}>
-                        <Nav.Item>
-                            <NavItem to="/" icon={BiPlanet} closeMenu={closeMenu}>Home</NavItem>
-                        </Nav.Item>
+            <NavDropdown title={<NavItemNoLink icon={RxRocket}>Projets</NavItemNoLink>}>
+              <NavDropdown.Item as={Link} to="/project" onClick={closeMenu}>Web</NavDropdown.Item>
+            </NavDropdown>
 
-                        <NavDropdown title={<NavItemNoLink icon={GiSamusHelmet}>À propos</NavItemNoLink>}>
-                            <NavDropdown.Item as={Link} to="/about" onClick={closeMenu}>Qui suis-je</NavDropdown.Item>
-                            <NavDropdown.Item as={Link} to="/skills" onClick={closeMenu}>Mes compétences</NavDropdown.Item>
-                        </NavDropdown>
-                        
-                        <NavDropdown title={<NavItemNoLink icon={RxRocket}>Projets</NavItemNoLink>}>
-                            <NavDropdown.Item as={Link} to="/project" onClick={closeMenu}>Web</NavDropdown.Item>
-                        </NavDropdown>
-
-                        <Nav.Item>
-                            <NavItem to="/contact" icon={MdMailOutline} closeMenu={closeMenu}>Contact</NavItem>
-                        </Nav.Item>
-                    </Nav>
-                </Navbar.Collapse>
-            </Container>
-        </Navbar>
-    )
+            <Nav.Item>
+              <NavItem to="/contact" icon={MdMailOutline} closeMenu={closeMenu}>Contact</NavItem>
+            </Nav.Item>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  )
 }
 
 export { NavBar }
