@@ -10,7 +10,7 @@ import { SocialIcon  } from './icon/icon'
 const Home = () => {
   return (
     <>
-      <Container fluid className="home-section" id="home">
+      <Container fluid className="home-section">
         <Container className="content">
           <div className="home-header text-center">
             <h1 className="heading neon">  Hello World !</h1>
@@ -38,8 +38,8 @@ const Home = () => {
         </Container>
       </Container>
 
-      <Container fluid className="home-about-section" id="about">
-        <Container>
+      <Container fluid className="home-about-section">
+        <Container className="content">
           <Row className="justify-content-between pt-3 pb-3">
             <Col md={6} className="home-terminal">
               <div className="writing-container">

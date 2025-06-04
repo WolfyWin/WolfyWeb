@@ -8,7 +8,7 @@ import ripley from '../../assets/img/ripley.webp'
 import space from '../../assets/img/space.svg'
 
 const About = () => (
-  <Container fluid className="about-section" id="about">
+  <Container fluid className="about-section">
     <Container className="content">
       <div className="text-center">
         <h1 className="heading neon"> About me </h1>

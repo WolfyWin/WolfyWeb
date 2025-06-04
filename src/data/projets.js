@@ -5,14 +5,16 @@ import veille from '../assets/img/Projects/veille.webp'
 import autism from '../assets/img/Projects/autism.webp'
 import ww from '../assets/img/Projects/ww.webp'
 import haku from '../assets/img/Projects/haku.webp'
+import claro from '../assets/img/Projects/claro.webp'
 
 import {
-  SiHtml5, SiReact, SiJavascript, SiVisualstudiocode, SiPhpstorm, SiGithub, SiCss3, SiPhp, SiRedux, SiSymfony, SiBootstrap, SiHugo, SiVuedotjs, SiQuasar, SiSass, SiLaravel, SiGit,
+  SiHtml5, SiReact, SiJavascript, SiVisualstudiocode, SiPhpstorm, SiGithub, SiCss3, SiPhp, SiRedux, SiSymfony, SiBootstrap, SiHugo, SiVuedotjs, SiQuasar, SiSass, SiLaravel, SiGit, SiAdminer, SiMariadb,
 } from 'react-icons/si'
+import {TbSql} from 'react-icons/tb'
 import {FcLinux} from 'react-icons/fc'
 import { GrMysql } from 'react-icons/gr'
 
-import { codeSlides, alterSlides, tsaSlides } from '../assets/img/slides'
+import { codeSlides, alterSlides, tsaSlides, claroSlides } from '../assets/img/slides'
 
 const projectsData = [
   {
@@ -73,6 +75,52 @@ const projectsData = [
       { Icon: SiLaravel, name: "Laravel", color: "#FF2D20" },
     ],
     demoLink: "https://haku-app.wolfyweb.fr",
+  },
+  {
+    imgPath: claro,
+    title: "Claroline",
+    description: "Claroline est une plateforme LMS open source pensée pour l’apprentissage collaboratif et sur-mesure.",
+    description2: (
+      <div>
+        <p>
+          <strong>Claroline</strong>, c’est une petite équipe avec une grande idée : rendre l’apprentissage plus libre, humain et collaboratif.
+          Cette plateforme open source (LMS) favorise l’autonomie, l’intelligence collective et permet de créer des espaces où formateurs et apprenants construisent ensemble.
+        </p>
+        <ul>
+          <li>
+            <strong>Ce que j’ai aimé&nbsp;:</strong> Vision centrée sur l’humain, éthique open source accessible à tous, et vraie passion pour l’éducation.
+          </li>
+          <li>
+            <strong>Mon expérience&nbsp;:</strong> Deux ans comme développeuse fullstack dans un cadre rare avec confiance, initiative, pédagogie engagée, équipe soudée.
+          </li>
+        </ul>
+        <p>
+          Travailler chez Claroline, c’était faire partie d’un projet qui a du cœur et du sens.
+        </p>
+      </div>
+    ),
+    tech: [
+      { Icon: SiPhp, name: "PHP", color: "#8993be" },
+      { Icon: SiSymfony, name: "Symfony" },
+      { Icon: SiJavascript, name: "Javascript", color: "#f0dc4e" },
+      { Icon: SiReact, name: "React", color: "#61DAFB" },
+      { Icon: SiRedux, name: "Redux", color: "#764ABC" },
+      { Icon: SiHtml5, name: "HTML5", color: "#E34F26" },
+      { Icon: SiCss3, name: "CSS3", color: "#214ce5" },
+      { Icon: SiSass, name: "Sass", color: "#CC6699" },
+      { Icon: SiBootstrap, name: "Bootstrap", color: "#7952B3" },
+      { Icon: TbSql, name: "SQL", color: "#F29111" },
+      { Icon: GrMysql, name: "MySQL", color: "#4479a1" },
+      { Icon: SiMariadb, name: "Mariadb", color: "#c1775a" },
+      { Icon: SiAdminer, name: "Adminer", color: "#E5D85C" },
+      { Icon: SiGit, name: "Git", color: "#F05032" },
+      { Icon: SiGithub, name: "GitHub", color: "#6170c2" },
+      { Icon: SiPhpstorm, name: "PhpStorm", color: "#ef32a2" },
+      { Icon: FcLinux, name: "Linux" },
+    ],
+    ghLink: "https://github.com/claroline/Claroline",
+    demoLink: "https://www.claroline.com/",
+    slides: claroSlides,
   },
   {
     imgPath: cthulhu,

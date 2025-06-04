@@ -25,8 +25,9 @@ const ProjectDetails = () => {
   return (
     <Container fluid className="details-section">
       <Container className="content">
-        <div onClick={() => navigate(-1)}>
-          <Icon  icon={TfiControlBackward} className="back-button" hoverText="Retour"/>
+        <div className="pt-4" onClick={() => navigate(-1)}>
+          <Icon  icon={TfiControlBackward} className="back-button"/>
+          <span className="back-text">Retour à la liste des projets</span>
         </div>
         <div className="details mt-3 mb-3">
           <h1 className="heading neon">{title}</h1>
@@ -61,19 +62,21 @@ const ProjectDetails = () => {
         </Col>
 
         {project.slides && (
-          <Row className="mt-5" >
-            <Col className="bloc-text mt-5 mb-4">
-              <Carousel>
-                {project.slides.map((slide, index) => (
-                  <Carousel.Item key={index}>
-                    <img className="d-block w-100" src={slide.imgPath} alt={`Slide ${index}`}/>
-                  </Carousel.Item>
-                ))}
-              </Carousel>
-            </Col>
+          <Row>
+            <Carousel className="carousel-wrapper">
+              {project.slides.map((slide, index) => (
+                <Carousel.Item key={index}>
+                  <img
+                    className="d-block w-100"
+                    src={slide.imgPath}
+                    alt={`Slide ${index}`}
+                  />
+                </Carousel.Item>
+              ))}
+            </Carousel>
           </Row>
         )}
-        </Container>
+      </Container>
     </Container>
   )
 }

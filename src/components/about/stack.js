@@ -1,11 +1,12 @@
 import React, { useState }from 'react'
 import { Col, Row } from 'react-bootstrap'
 import {
-  SiHtml5, SiReact, SiGit, SiSass, SiLess, SiJavascript, SiWindows, SiVisualstudiocode, SiPhpstorm, SiGithub, SiCss3,
+  SiHtml5, SiReact, SiGit, SiAdminer, SiMariadb, SiSass, SiLess, SiJavascript, SiWindows, SiVisualstudiocode, SiPhpstorm, SiGithub, SiCss3,
   SiPhp, SiRedux, SiSymfony, SiLaravel, SiBootstrap, SiHugo, SiVuedotjs, SiQuasar
 } from 'react-icons/si'
 import { FcLinux } from 'react-icons/fc'
 import { GrMysql } from 'react-icons/gr'
+import { TbSql } from 'react-icons/tb'
 
 const techs = [
   { Icon: SiHtml5, name: "HTML5", color: "#E34F26" },
@@ -18,7 +19,10 @@ const techs = [
   { Icon: SiRedux, name: "Redux", color: "#764ABC" },
   { Icon: SiGit, name: "Git", color: "#F05032" },
   { Icon: SiHugo, name: "Hugo", color: "#FF4088" },
-  { Icon: GrMysql, name: "MySQL", color: "#4479a1" },
+  { Icon: GrMysql, name: "MySQL", color: "#00758f" },
+  { Icon: TbSql, name: "SQL", color: "#F29111" },
+  { Icon: SiAdminer, name: "Adminer", color: "#E5D85C" },
+  { Icon: SiMariadb, name: "Mariadb", color: "#c1775a" },
   { Icon: SiBootstrap, name: "Bootstrap", color: "#7952B3" },
   { Icon: SiSass, name: "Sass", color: "#CC6699" },
   { Icon: SiLess, name: "Less", color: "#1D365D" },
@@ -46,7 +50,7 @@ const Stack = ({items}) => {
     <Row className="tech-stack-container">
       {items.map((item, index) => (
         <Col xs={4} md={2} className="tech-icons" key={index}>
-          <div data-aos="fade-up" onTouchStart={() => handleTouch(item.name)} onMouseEnter={() => setTooltip(item.name)} onMouseLeave={() => setTooltip(null)}>
+          <div className="pb-3" data-aos="fade-up" onTouchStart={() => handleTouch(item.name)} onMouseEnter={() => setTooltip(item.name)} onMouseLeave={() => setTooltip(null)}>
             <item.Icon color={item.color} />
             {tooltip === item.name && 
               <div className="tooltip">

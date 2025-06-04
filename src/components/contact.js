@@ -51,9 +51,9 @@ const Contact = () => {
         <div className="text-center">
           <h1 className="heading neon">Contact</h1>
         </div>
-        <Row className="d-flex justify-content-between pt-2">
+        <Row className="pt-2">
           <Col md={5} className="container-card">
-            <div className="contact-card">
+            <div className="contact-card shadow p-4 mb-4">
               <div className="profileimage">
                 <img src={contact} alt="contact-img" className="profile"/>
               </div>
@@ -66,29 +66,29 @@ const Contact = () => {
                 </div>
             </div>
           </Col>
-          <Col md={6} className="container-form my-3">
+          <Col md={7} className="container-form my-3 shadow p-4 mb-4">
             <h2 className="contact-title purple text-center">Vous avez un projet ? Une question ?</h2>
 
-              <Form className="form-contact" onSubmit={handleSubmit}>
-                <Form.Group className="mb-4">
-                  <Form.Control required type="name" name="nom" placeholder="Nom / Prénom" pattern="[A-Za-zÀ-ÖØ-öø-ÿ '-]+" />
-                </Form.Group>
-                <Form.Group controlId="formBasicEmail" className="mb-4">
-                  <Form.Control type="email" name="email" placeholder="Email" />
-                </Form.Group>
-                <Form.Group controlId="formBasicMessage" className="mb-4">
-                  <Form.Control as="textarea" name="message" rows={3} placeholder="Message"/>
-                </Form.Group>
+            <Form className="form-contact" onSubmit={handleSubmit}>
+              <Form.Group className="mb-4">
+                <Form.Control required type="name" name="nom" placeholder="Nom / Prénom" pattern="[A-Za-zÀ-ÖØ-öø-ÿ '-]+" />
+              </Form.Group>
+              <Form.Group controlId="formBasicEmail" className="mb-4">
+                <Form.Control type="email" name="email" placeholder="Email" />
+              </Form.Group>
+              <Form.Group controlId="formBasicMessage" className="mb-4">
+                <Form.Control as="textarea" name="message" rows={3} placeholder="Message"/>
+              </Form.Group>
 
-                <div className="text-center">
-                  <Button variant="start glow-on-hover" type="submit">
-                    <h6 className="blue"> Envoyer </h6>
-                  </Button>
-                </div>
-              </Form>
-              {success && <p id="success" className="glitch neon success">Votre message a bien été envoyé !</p>}
-              {!success && error && <p id="error" className="noglitch blue error">{error}</p>}
-            </Col>
+              <div className="text-center">
+                <Button variant="start glow-on-hover" type="submit">
+                  <h6 className="blue"> Envoyer </h6>
+                </Button>
+              </div>
+            </Form>
+            {success && <p id="success" className="glitch neon success">Votre message a bien été envoyé !</p>}
+            {!success && error && <p id="error" className="noglitch blue error">{error}</p>}
+          </Col>
         </Row>
       </Container>
     </Container>
