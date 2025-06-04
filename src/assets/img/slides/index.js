@@ -27,6 +27,11 @@ import tsa7 from './tsa/7.webp'
 import tsa8 from './tsa/8.webp'
 import tsa9 from './tsa/9.webp'
 
+import claro1 from './claro/1.webp'
+import claro2 from './claro/2.webp'
+import claro3 from './claro/3.webp'
+import claro4 from './claro/4.webp'
+
 const code = [code1, code2, code3, code4, code5, code6, code7, code8, code9, code10, code11, code12, code13, code14]
 const codeSlides = code.map((imgPath) => ({ imgPath }))
 
@@ -36,4 +41,7 @@ const alterSlides = alter.map((imgPath) => ({ imgPath }))
 const tsa = [tsa1, tsa2, tsa3, tsa4, tsa5, tsa6, tsa7, tsa8, tsa9]
 const tsaSlides = tsa.map((imgPath) => ({ imgPath }))
 
-export { codeSlides, alterSlides, tsaSlides }
+const claro = [claro1, claro2, claro3, claro4]
+const claroSlides = claro.map((imgPath) => ({ imgPath }))
+
+export { codeSlides, alterSlides, tsaSlides,  claroSlides }

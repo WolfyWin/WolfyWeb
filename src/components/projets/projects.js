@@ -10,7 +10,7 @@ import { MdArrowRight } from 'react-icons/md'
 const Projects = () => (
 
   <Container fluid className="project-section">
-    <Container>
+    <Container className="content">
       <div className="text-center">
         <h1 className="heading neon"> Mes projets</h1>
       </div>

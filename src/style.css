@@ -123,6 +123,9 @@ a {
 .heading {
   font-family: 'mokoto_glitch_mk2', sans-serif;
   display: inline-block;
+  flex: 0;
+  white-space: nowrap;
+  margin: auto;
   font-size: 2em;
   padding-top: 30px;
   padding-bottom: 30px;
@@ -130,7 +133,7 @@ a {
 }
 
 .content {
-  padding: 9rem 0 2rem !important;
+  padding: 6rem 0 2rem !important;
   color: whitesmoke;
   text-align: left;
 }
@@ -680,7 +683,7 @@ a:hover {
 /* ------------------------------------ Projects -----------------------------------------  */
 
 .project-section {
-  padding-top: 160px;
+  padding-top: 30px;
   padding-bottom: 30px;
   background-size: cover;
   color: white;
@@ -764,9 +767,24 @@ a:hover {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  font-size: 30px;
-  transition: 0.5s;
-  color: white;
+  background: none;
+  border: none;
+  box-shadow: none;
+  color: #37f5f5;
+  font-size: 2.2em;
+  transition: color 0.2s, transform 0.2s;
+}
+.back-text {
+  margin-left: 5px;
+  font-weight: bold;
+  color: #37f5f5;
+  letter-spacing: 1px;
+}
+
+.back-button:hover {
+  color: #fff;
+  text-shadow: 0 0 12px #37f5f5, 0 0 40px #8134CF88;
+  transform: scale(1.15) translateX(-2px);
 }
 
 .back-button::before {
@@ -810,7 +828,7 @@ a:hover {
 }
 
 .project-desc {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
   font-weight: 500;
   padding-bottom: 20px;
   line-height: 1.8;
@@ -915,7 +933,7 @@ a:hover {
 .contact-card {
   width: 60%;
   text-align: center;
-  padding: 10px;
+  padding: 0;
   background-color: rgba(15, 11, 20, 0.671);
   border: 2px solid rgba(200, 137, 230, 0.637);
   border-radius: 10px;
@@ -991,6 +1009,7 @@ a:hover {
 
 .contact-section {
   padding-bottom: 30px;
+  padding-top: 30px;
   background-size: cover;
   color: white;
   position: relative;
@@ -1001,11 +1020,14 @@ a:hover {
 .container-form {
   background-color: rgba(15, 11, 20, 0.671);
   border-radius: 10px;
-  /*box-shadow: 1px 1px 5px rgb(0, 255, 94), -5px -5px 15px  rgb(55, 245, 245);*/
   padding: 10px;
   border: 2px solid rgba(200, 137, 230, 0.637);
   box-shadow: 4px 5px 4px 3px rgb(89 4 168 / 14%);
+  max-width: 650px;   /* ou 600px selon tes goûts */
+  width: 100%;
+  margin: 0 auto;
 }
+
 
 .form-contact {
   padding: 50px;
@@ -1057,6 +1079,18 @@ a:hover {
     margin: auto;
   }
 }
+
+@media (max-width: 600px) {
+  .form-contact {
+    padding: 18px 7px !important;
+  }
+  .form-control {
+    font-size: 1em;
+    padding: 11px 9px;
+  }
+}
+
+
 /* ------------------------------------ Footer---------------------------------------------*/
 
 .footer {
@@ -1212,4 +1246,51 @@ a:hover {
   0% { background-position: 0 0; }
   50% { background-position: 400% 0; }
   100% { background-position: 0 0; }
+}
+
+
+/* ------------------------------------ Carousel ------------------------------------  */
+
+
+.carousel-wrapper {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 12px 0;
+}
+.carousel .carousel-inner {
+  border-radius: 0.5rem;
+}
+
+.carousel .carousel-indicators {
+  bottom: -30px;
+}
+
+@media (min-width: 768px) {
+  .carousel .carousel-indicators [data-bs-target] {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: white;
+    opacity: 0.4;
+    margin: 0 4px;
+    border: none;
+    box-shadow: none;
+    transition: opacity 0.2s, background 0.2s;
+  }
+  .carousel .carousel-indicators .active {
+    opacity: 0.9;
+    background: #8efff4;
+  }
+}
+
+@media (min-width: 1200px) {
+  .carousel .carousel-control-prev
+  {
+    left: -100px;
+  }
+  .carousel .carousel-control-next
+  {
+    right: -100px;
+  }
 }
