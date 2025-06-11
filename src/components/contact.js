@@ -51,7 +51,7 @@ const Contact = () => {
         <div className="text-center">
           <h1 className="heading neon">Contact</h1>
         </div>
-        <Row className="pt-2">
+        <Row className="pt-2 justify-content-center">
           <Col md={5} className="container-card">
             <div className="contact-card shadow p-4 mb-4">
               <div className="profileimage">
