@@ -79,23 +79,23 @@ const projectsData = [
   {
     imgPath: claro,
     title: "Claroline",
-    description: "Claroline est une plateforme LMS open source pensée pour l’apprentissage collaboratif et sur-mesure.",
+    description: "Claroline est une plateforme LMS open source pensée pour l'apprentissage collaboratif et sur-mesure.",
     description2: (
       <div>
         <p>
-          <strong>Claroline</strong>, c’est une petite équipe avec une grande idée : rendre l’apprentissage plus libre, humain et collaboratif.
-          Cette plateforme open source (LMS) favorise l’autonomie, l’intelligence collective et permet de créer des espaces où formateurs et apprenants construisent ensemble.
+          <strong>Claroline</strong>, c'est une petite équipe avec une grande idée : rendre l'apprentissage plus libre, humain et collaboratif.
+          Cette plateforme open source (LMS) favorise l'autonomie, l'intelligence collective et permet de créer des espaces où formateurs et apprenants construisent ensemble.
         </p>
         <ul>
           <li>
-            <strong>Ce que j’ai aimé&nbsp;:</strong> Vision centrée sur l’humain, éthique open source accessible à tous, et vraie passion pour l’éducation.
+            <strong>Ce que j'ai aimé&nbsp;:</strong> Vision centrée sur l'humain, éthique open source accessible à tous, et vraie passion pour l'éducation.
           </li>
           <li>
             <strong>Mon expérience&nbsp;:</strong> Deux ans comme développeuse fullstack dans un cadre rare avec confiance, initiative, pédagogie engagée, équipe soudée.
           </li>
         </ul>
         <p>
-          Travailler chez Claroline, c’était faire partie d’un projet qui a du cœur et du sens.
+          Travailler chez Claroline, c'était faire partie d'un projet qui a du cœur et du sens.
         </p>
       </div>
     ),
