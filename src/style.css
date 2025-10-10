@@ -536,7 +536,7 @@ a:hover {
 
 /* -------------------card-----------------------  */
 .quote-card-view {
-  background-color: rgba(15, 11, 20, 0.775);
+  background-color: rgba(0, 0, 0, 0.517);
   border: 2px solid rgba(200, 137, 230, 0.637);
   border-radius: 10px;
   box-shadow: 4px 5px 4px 3px rgb(89 4 168 / 14%);
@@ -1228,5 +1228,183 @@ a:hover {
   .carousel .carousel-control-next
   {
     right: -100px;
+  }
+}
+
+/* ------------------------------------ Timeline ------------------------------------  */
+
+.timeline-section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline-wrapper {
+  position: relative;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 4px;
+  height: 100%;
+  background-color: #7b4bff;
+  transform: translateX(-50%);
+  z-index: 0;
+}
+
+/* ALTERNANCE GAUCHE / DROITE */
+.timeline-item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  position: relative;
+  margin-bottom: 40px;
+  z-index: 1;
+}
+
+.timeline-item.left {
+  justify-content: flex-start;
+}
+
+/* CARTE */
+.timeline-card {
+  background-color: #161636;
+  border: 1px solid #7b4bff;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(123, 75, 255, 0.2);
+  padding: 1em;
+}
+
+/* TITRES ET DATES */
+.timeline-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  font-family: 'ibm_mono', sans-serif;
+}
+
+/* CONTENU INTERNE */
+.timeline-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  color: white;
+}
+
+.timeline-list li {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+.timeline-content-info {
+  background-color: rgba(255, 255, 255, 0.15);
+  color: #e6e6e6;
+  font-weight: 500;
+  font-size: 0.9rem;
+  padding: 5px 10px;
+  border-radius: 2px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+.timeline-content-info-title,
+.timeline-content-info-date {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.timeline-content-info svg {
+  color: #7b4bff;
+}
+
+/* BADGES TECH */
+.timeline-card .badge {
+  font-family: 'ibm_mono', sans-serif;
+  font-size: 0.85rem;
+  padding: 0.4em 0.6em;
+  border-radius: 2px;
+  background-color: #7b4bff !important;
+}
+
+.timeline-point-icon {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  width: 32px;
+  height: 32px;
+  background-color: #7b4bff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 16px;
+  box-shadow:
+    0 0 25px rgba(180, 120, 255, 1),
+    0 0 45px rgba(180, 120, 255, 0.7);
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 1199px) {
+  .timeline-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .timeline-point-icon {
+    position: relative;
+    top: -13px;
+    left: 0;
+    transform: none;
+    margin-bottom: 12px;
+    z-index: 1;
+  }
+
+  .timeline-line {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-card {
+    width: 100%;
+    max-width: 90%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .timeline-point-icon {
+    width: 24px;
+    height: 24px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline-content-info {
+    flex-direction: column;
+    align-items: start;
+    gap: 6px;
+    text-align: center;
+  }
+
+  .timeline-content-info-title,
+  .timeline-content-info-date {
+    justify-content: center;
   }
 }
