@@ -72,6 +72,7 @@ const NavBar = () => {
 
             <NavDropdown title={<NavItemNoLink icon={RxRocket}>Projets</NavItemNoLink>}>
               <NavDropdown.Item as={Link} to="/project" onClick={closeMenu}>Web</NavDropdown.Item>
+              <NavDropdown.Item as={Link} to="/other" onClick={closeMenu}>Autres projets</NavDropdown.Item>
             </NavDropdown>
 
             <Nav.Item>

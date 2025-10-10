@@ -27,10 +27,36 @@ import tsa7 from './tsa/7.webp'
 import tsa8 from './tsa/8.webp'
 import tsa9 from './tsa/9.webp'
 
+import autism1 from './autism/1.webp'
+import autism2 from './autism/2.webp'
+import autism3 from './autism/3.webp'
+import autism4 from './autism/4.webp'
+import autism5 from './autism/5.webp'
+import autism6 from './autism/6.webp'
+import autism7 from './autism/7.webp'
+
 import claro1 from './claro/1.webp'
 import claro2 from './claro/2.webp'
 import claro3 from './claro/3.webp'
 import claro4 from './claro/4.webp'
+
+import leitner1 from './leitner/1.webp'
+import leitner2 from './leitner/2.webp'
+import leitner3 from './leitner/3.webp'
+import leitner4 from './leitner/4.webp'
+import leitner5 from './leitner/5.webp'
+import leitner6 from './leitner/6.webp'
+import leitner7 from './leitner/7.webp'
+import leitner8 from './leitner/8.webp'
+import leitner9 from './leitner/9.webp'
+
+import flashcard1 from './flashcard/1.webp'
+import flashcard2 from './flashcard/2.webp'
+import flashcard3 from './flashcard/3.webp'
+import flashcard4 from './flashcard/4.webp'
+import flashcard5 from './flashcard/5.webp'
+import flashcard6 from './flashcard/6.webp'
+import flashcard7 from './flashcard/7.webp'
 
 const code = [code1, code2, code3, code4, code5, code6, code7, code8, code9, code10, code11, code12, code13, code14]
 const codeSlides = code.map((imgPath) => ({ imgPath }))
@@ -41,7 +67,16 @@ const alterSlides = alter.map((imgPath) => ({ imgPath }))
 const tsa = [tsa1, tsa2, tsa3, tsa4, tsa5, tsa6, tsa7, tsa8, tsa9]
 const tsaSlides = tsa.map((imgPath) => ({ imgPath }))
 
+const autism = [autism1, autism2, autism3, autism4, autism5, autism6, autism7]
+const autismSlides = autism.map((imgPath) => ({ imgPath }))
+
 const claro = [claro1, claro2, claro3, claro4]
 const claroSlides = claro.map((imgPath) => ({ imgPath }))
 
-export { codeSlides, alterSlides, tsaSlides,  claroSlides }
+const leitner = [leitner1, leitner2, leitner3, leitner4, leitner5, leitner6, leitner7, leitner8, leitner9]
+const leitnerSlides = leitner.map((imgPath) => ({ imgPath }))
+
+const flashcard = [flashcard1, flashcard2, flashcard3, flashcard4, flashcard5, flashcard6, flashcard7]
+const flashcardSlides = flashcard.map((imgPath) => ({ imgPath }))
+
+export { codeSlides, alterSlides, tsaSlides,  claroSlides, leitnerSlides, flashcardSlides, autismSlides }
