@@ -1363,6 +1363,23 @@ a:hover {
     0 0 45px rgba(180, 120, 255, 0.7);
 }
 
+.timeline-button {
+  font-family: 'ibm_mono', sans-serif;
+  font-weight: 700;
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #161636;
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.timeline-button:hover {
+  background-color: #7b4bff;
+  color: white;
+}
 
 /* RESPONSIVE */
 @media (max-width: 1199px) {
