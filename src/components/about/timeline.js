@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import { FaCertificate, FaCalendarAlt } from 'react-icons/fa'
 import {Container, Card, Badge, Button} from 'react-bootstrap'
-import { FaUserGraduate, FaRocket, FaSatellite, FaStar } from 'react-icons/fa'
+import { FaUserGraduate, FaRocket, FaSatellite, FaStar, FaDownload, FaFilePdf } from 'react-icons/fa'
 
 
 const experiences = [
@@ -52,6 +52,8 @@ const icons = [
   <FaStar />, <FaSatellite />, <FaRocket />, <FaUserGraduate />
 ]
 
+const CV_URL = '/cv/rebecca-tinchon-cv.pdf'
+const CV_FILENAME = 'Rebecca-Tinchon-CV.pdf'
 
 const Timeline = () => {
   return (
@@ -59,6 +61,31 @@ const Timeline = () => {
       <Container className="content">
         <div className="text-center mb-5">
           <h1 className="heading neon">Mon parcours</h1>
+        </div>
+
+        <div className="d-flex justify-content-center gap-4 mb-5">
+            <Button
+              as="a"
+              href={CV_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="outline-light"
+              className="timeline-button"
+            >
+              <FaFilePdf className="me-2 mb-1" />
+              Voir le CV (PDF)
+            </Button>
+
+            <Button
+              as="a"
+              href={CV_URL}
+              download={CV_FILENAME}
+              variant="outline-light"
+              className="timeline-button"
+            >
+              <FaDownload className="me-2 mb-1" />
+              Télécharger le CV
+            </Button>
         </div>
 
         <div className="timeline-wrapper mx-5">
