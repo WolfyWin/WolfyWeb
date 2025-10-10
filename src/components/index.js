@@ -7,6 +7,8 @@ import { About } from './about/about'
 import { Timeline } from './about/timeline'
 import { Projects } from './projets/projects'
 import { ProjectDetails } from './projets/details'
+import { Other } from './projets/other'
+import { OtherDetails } from './projets/otherDetails'
 import { Contact } from './contact'
 import { Footer } from './footer'
 
@@ -20,6 +22,8 @@ export  {
   Timeline,
   Projects,
   ProjectDetails,
+  Other,
+  OtherDetails,
   Contact,
   Footer
 }

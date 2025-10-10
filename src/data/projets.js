@@ -6,6 +6,8 @@ import autism from '../assets/img/Projects/autism.webp'
 import ww from '../assets/img/Projects/ww.webp'
 import haku from '../assets/img/Projects/haku.webp'
 import claro from '../assets/img/Projects/claro.webp'
+import leitner from '../assets/img/Projects/leitner.webp'
+import flashcard from '../assets/img/Projects/flashcard.webp'
 
 import {
   SiHtml5, SiReact, SiJavascript, SiVisualstudiocode, SiPhpstorm, SiGithub, SiCss3, SiPhp, SiRedux, SiSymfony, SiBootstrap, SiHugo, SiVuedotjs, SiQuasar, SiSass, SiLaravel, SiGit, SiAdminer, SiMariadb,
@@ -14,7 +16,7 @@ import {TbSql} from 'react-icons/tb'
 import {FcLinux} from 'react-icons/fc'
 import { GrMysql } from 'react-icons/gr'
 
-import { codeSlides, alterSlides, tsaSlides, claroSlides } from '../assets/img/slides'
+import {codeSlides, alterSlides, tsaSlides, autismSlides, claroSlides, leitnerSlides, flashcardSlides} from '../assets/img/slides'
 
 const projectsData = [
   {
@@ -215,17 +217,20 @@ const projectsData = [
     slides: codeSlides,
     wfLink: "https://drive.google.com/file/d/1dbce5VnAHZO5YmpVWkyTcOHQi9uPTgh4/view?usp=share_link"
   },
+]
+
+const otherProjectsData = [
   {
     imgPath: veille,
     title: "Accessibilité",
     description: "Sensibilisation à l'accessibilité web des personnes neuroAtypiques dans le cadre d'une veille technologique.",
     description2:(
       <div>
-        Ce projet est une initiative réalisée dans le cadre d'une veille technologique lors de ma formation à la Wild Code School et présenté aux autres développeurs. 
+        Ce projet est une initiative réalisée dans le cadre d'une veille technologique lors de ma formation à la Wild Code School et présenté aux autres développeurs.
         <br />
         L'objectif principal était de présenter et sensibiliser à l'accessibilité web des personnes neuroatypiques.
         <br />
-        J'ai cherché à favoriser une plus grande compréhension et une plus grande prise en compte de ces questions d'accessibilité dans leurs travaux futurs. 
+        J'ai cherché à favoriser une plus grande compréhension et une plus grande prise en compte de ces questions d'accessibilité dans leurs travaux futurs.
         <br />
         Ce projet a ainsi permis de souligner l'importance de l'empathie et de la considération pour tous les utilisateurs dans la conception et le développement.
       </div>
@@ -239,13 +244,69 @@ const projectsData = [
     description: "Rédaction d'un article pour la journée mondiale de sensibilisation à l'autisme.",
     description2: (
       <div>
-        Dans le cadre de la Journée mondiale de sensibilisation à l'autisme, j'ai rédigé un article pour le site d'AlterLMS. 
+        Dans le cadre de la Journée mondiale de sensibilisation à l'autisme, j'ai rédigé un article pour le site d'AlterLMS.
         <br />
-        L'objectif était de fournir une information précise et empathique, tout en mettant l'accent sur l'importance de la sensibilisation et de l'acceptation surout dans le domaine de la tech.
+        L'objectif était de fournir une information précise et empathique, tout en mettant l'accent sur l'importance de la sensibilisation et de l'acceptation surtout dans le domaine de la tech.
       </div>
     ),
-    demoLink: "https://www.alterlms.fr/blog/articles/sensibilisation-tsa/"
+    slides: autismSlides
+  },
+  {
+    imgPath: leitner,
+    title: "Système Leitner",
+    description: "Étude et présentation du système de Leitner afin de concevoir un algorithme de révision espacée pour l’outil Flashcards.",
+    description2: (
+      <div>
+        <h3 className="project-desc-title blue my-3">🎯 Objectif du projet</h3>
+        Avant de développer un nouvel outils appelé "Flashcards", j'ai été chargée de mener une recherche approfondie sur la méthode de Leitner, un système de révision espacée visant à optimiser la mémorisation à long terme.
+        <br />
+        L'objectif était de comprendre en détail son fonctionnement afin de concevoir un algorithme adapté à notre futur outil et de présenter le concept à l’équipe de manière claire et pédagogique.
+        <br />
+        <br />
+        <h3 className="project-desc-title blue my-3">🧩 Missions réalisées</h3>
+        <ul>
+          <li>Recherche et analyse du fonctionnement de la méthode de Leitner (organisation en boîtes, révision par intervalles, logique de déplacement des cartes).</li>
+          <li>Création d'une présentation (slides) destinée à l'équipe de développement.</li>
+          <li>Préparation de la phase d'intégration de l'algorithme dans un nouvel outil d'apprentissage Flashcards, que j’ai ensuite développé.</li>
+        </ul>
+      </div>
+    ),
+    slides: leitnerSlides,
+  },
+  {
+    imgPath: flashcard,
+    title: "Flashcards",
+    description: "Conception et développement complet de l'outil Flashcards, basé sur la méthode de révision Leitner.",
+    description2: (
+      <div>
+        <h3 className="project-desc-title blue my-3">🎯 Objectif du projet</h3>
+        Suite à l'étude et la présentation du système de Leitner, j'ai été chargée de concevoir et développer entièrement un nouvel outil d’apprentissage interactif basé sur ce principe : Flashcards.
+        <br />
+        L'objectif était de permettre aux utilisateurs de créer, réviser et suivre leurs cartes de mémorisation, tout en intégrant un système de progression intelligente inspiré de la méthode Leitner.
+        <br />
+        <br />
+        <h3 className="project-desc-title blue my-3">💻 Missions réalisées</h3>
+        <ul>
+          <li>Conception fonctionnelle de l'outil à partir du modèle Leitner étudié précédemment.</li>
+          <li>Développement complet de l'outil, du backend au frontend.</li>
+          <li>Création d’une interface utilisateur intuitive, centrée sur la simplicité d’usage et la motivation à apprendre.</li>
+        </ul>
+      </div>
+    ),
+    tech: [
+      { Icon: SiReact, name: "React", color: "#61DAFB" },
+      { Icon: SiRedux, name: "Redux", color: "#764ABC" },
+      { Icon: SiSass, name: "Sass", color: "#CC6699" },
+      { Icon: SiPhp, name: "PHP", color: "#8993be" },
+      { Icon: SiSymfony, name: "Symfony" },
+      { Icon: GrMysql, name: "MySQL", color: "#4479a1" },
+      { Icon: FcLinux, name: "Linux" },
+      { Icon: SiGithub, name: "GitHub", color: "#6170c2" },
+      { Icon: SiGit, name: "Git", color: "#F05032" },
+      { Icon: SiPhpstorm, name: "PhpStorm", color: "#ef32a2" }
+    ],
+    slides: flashcardSlides,
   },
 ]
 
-export { projectsData }
+export { projectsData, otherProjectsData }
