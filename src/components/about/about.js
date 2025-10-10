@@ -16,7 +16,7 @@ const About = () => (
       <Row className="about-row">
         <Col md={7} className="mb-3 mb-md-0 order-2 order-md-1">
           <Card className="quote-card-view">
-            <Card.Body className="blockquote mb-0">
+            <Card.Body>
               <h3 className="about-card-title">
                 ✨ <span className=" blue"> Qui suis-je ?</span>
               </h3>
@@ -41,7 +41,7 @@ const About = () => (
         </Col>
         <Col md={7} className="order-2 order-md-2">
           <Card className="quote-card-view">
-            <Card.Body className="blockquote mb-0">
+            <Card.Body>
               <h3 className="about-card-title">
                 👾 <span className=" blue"> Ce que j’aime dans la vie </span>
               </h3>
@@ -63,7 +63,7 @@ const About = () => (
       <Row className="about-row">
         <Col md={7} className="order-2 order-md-1">
           <Card className="quote-card-view">
-            <Card.Body className="blockquote mb-0">
+            <Card.Body>
               <h3 className="about-card-title">
                 👩🏻‍💻 <span className=" blue"> Une développeuse… mais pas que ! </span>
               </h3>
@@ -91,7 +91,7 @@ const About = () => (
         </Col>
         <Col md={7}>
           <Card className="quote-card-view">
-            <Card.Body className="blockquote mb-0">
+            <Card.Body>
               <h3 className="about-card-title">
                 🐾 <span className=" blue">Une amoureuse des animaux</span>
               </h3>
@@ -121,7 +121,7 @@ const About = () => (
       <Row className="about-row">
         <Col md={7} className="order-2 order-md-1">
           <Card className="quote-card-view">
-            <Card.Body className="blockquote mb-0">
+            <Card.Body>
               <h3 className="about-card-title"> 🧠 <span className=" blue">Une neuroAtypie assumée</span>
               </h3>
               <div className="about-card-body">
@@ -144,8 +144,8 @@ const About = () => (
       </Row>
       <div className="mt-3 text-center">
         <Button variant="start glow-on-hover">
-          <Link to={`/skills`}>
-            <h2 className="blue"> SKILLS </h2>
+          <Link to={`/timeline`}>
+            <h4 className="blue"> Mon parcours </h4>
           </Link>
         </Button>
       </div>

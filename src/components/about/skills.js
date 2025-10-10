@@ -4,7 +4,7 @@ import {Container, Button} from 'react-bootstrap'
 import {Techstack, Toolstack} from './stack'
 
 const Skills = () => (
-  <Container fluid className="competency-section" id="competency">
+  <Container fluid className="competency-section">
     <Container className="content">
       <div className="details">
         <h2 className="heading neon">Compétences</h2>
